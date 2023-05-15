@@ -1,0 +1,14 @@
+D:\C# bead\LibraryApplication\LibraryApplication\LibraryApplication.Contract\bin\Debug\net6.0\LibraryApplication.Contract.deps.json
+D:\C# bead\LibraryApplication\LibraryApplication\LibraryApplication.Contract\bin\Debug\net6.0\LibraryApplication.Contract.runtimeconfig.json
+D:\C# bead\LibraryApplication\LibraryApplication\LibraryApplication.Contract\bin\Debug\net6.0\LibraryApplication.Contract.dll
+D:\C# bead\LibraryApplication\LibraryApplication\LibraryApplication.Contract\bin\Debug\net6.0\LibraryApplication.Contract.pdb
+D:\C# bead\LibraryApplication\LibraryApplication\LibraryApplication.Contract\obj\Debug\net6.0\LibraryApplication.Contract.csproj.AssemblyReference.cache
+D:\C# bead\LibraryApplication\LibraryApplication\LibraryApplication.Contract\obj\Debug\net6.0\LibraryApplication.Contract.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# bead\LibraryApplication\LibraryApplication\LibraryApplication.Contract\obj\Debug\net6.0\LibraryApplication.Contract.AssemblyInfoInputs.cache
+D:\C# bead\LibraryApplication\LibraryApplication\LibraryApplication.Contract\obj\Debug\net6.0\LibraryApplication.Contract.AssemblyInfo.cs
+D:\C# bead\LibraryApplication\LibraryApplication\LibraryApplication.Contract\obj\Debug\net6.0\LibraryApplication.Contract.csproj.CoreCompileInputs.cache
+D:\C# bead\LibraryApplication\LibraryApplication\LibraryApplication.Contract\obj\Debug\net6.0\LibraryApplication.Contract.dll
+D:\C# bead\LibraryApplication\LibraryApplication\LibraryApplication.Contract\obj\Debug\net6.0\refint\LibraryApplication.Contract.dll
+D:\C# bead\LibraryApplication\LibraryApplication\LibraryApplication.Contract\obj\Debug\net6.0\LibraryApplication.Contract.pdb
+D:\C# bead\LibraryApplication\LibraryApplication\LibraryApplication.Contract\obj\Debug\net6.0\LibraryApplication.Contract.genruntimeconfig.cache
+D:\C# bead\LibraryApplication\LibraryApplication\LibraryApplication.Contract\obj\Debug\net6.0\ref\LibraryApplication.Contract.dll
