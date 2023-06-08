@@ -1,0 +1,35 @@
+﻿@using LibrarianApplication.Blazor.Model;
+<EditForm Model="@Person" OnValidSubmit="@HandleValidSubmitAsync">
+    <DataAnnotationsValidator />
+    <div class="mb0">
+        <label class="col-form-label">ReaderNumber</label>
+        <InputNumber @bind-Value="@Person.ReaderNumber" class="form-control" />
+    </div>
+    <div class="mb0">
+        <label class="col-form-label">Name</label>
+        <InputText @bind-Value="@Person.Name" class="form-control" />
+        <ValidationMessage For="() => Person.Name" />
+    </div>
+    <div class="mb0">
+        <label class="col-form-label">Address</label>
+        <InputText @bind-Value="@Person.Address" class="form-control" />
+        <ValidationMessage For="() => Person.Address" />
+    </div>
+    <div class="mb0">
+        <label class="col-form-label">BirthDate</label>
+        <InputDate @bind-Value="@Person.BirthDate" class="form-control" />
+        <ValidationMessage For="() => Person.BirthDate" />
+    </div>
+    <button style="margin-top:10px" type="submit" class="btn btn-primary form-control mb-3">@ButtonTitle</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public Person Person { get; set; }
+
+    [Parameter]
+    public string ButtonTitle { get; set; }
+
+    [Parameter]
+    public Func<Task> HandleValidSubmitAsync { get; set; }
+}

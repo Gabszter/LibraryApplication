@@ -1,0 +1,18 @@
+﻿@page "/persons/add"
+@using LibrarianApplication.Blazor.Model;
+@using LibrarianApplication.Blazor.Services;
+@inject IPersonService PersonService
+@inject NavigationManager NavigationManager
+
+<h3>PersonAdd</h3>
+<MemberForm Person="@Person" ButtonTitle="Add" HandleValidSubmitAsync="@HandleValidSubmitAsync"/>
+
+@code {
+    private Person Person { get; set; } = new();
+
+    private async Task HandleValidSubmitAsync()
+    {
+        await PersonService.AddPersonAsync(Person);
+        NavigationManager.NavigateTo("/persons");
+    }
+}

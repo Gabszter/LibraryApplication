@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibraryApplication.Contract\\LibraryApplication.Contract.csproj": {}
+    "C:\\Users\\it\\Documents\\Egyetem\\LibraryApplication\\LibraryApplication\\LibraryApplication.Contract\\LibraryApplication.Contract.csproj": {}
   },
   "projects": {
-    "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibraryApplication.Contract\\LibraryApplication.Contract.csproj": {
+    "C:\\Users\\it\\Documents\\Egyetem\\LibraryApplication\\LibraryApplication\\LibraryApplication.Contract\\LibraryApplication.Contract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibraryApplication.Contract\\LibraryApplication.Contract.csproj",
+        "projectUniqueName": "C:\\Users\\it\\Documents\\Egyetem\\LibraryApplication\\LibraryApplication\\LibraryApplication.Contract\\LibraryApplication.Contract.csproj",
         "projectName": "LibraryApplication.Contract",
-        "projectPath": "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibraryApplication.Contract\\LibraryApplication.Contract.csproj",
-        "packagesPath": "C:\\Users\\csere\\.nuget\\packages\\",
-        "outputPath": "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibraryApplication.Contract\\obj\\",
+        "projectPath": "C:\\Users\\it\\Documents\\Egyetem\\LibraryApplication\\LibraryApplication\\LibraryApplication.Contract\\LibraryApplication.Contract.csproj",
+        "packagesPath": "C:\\Users\\it\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\it\\Documents\\Egyetem\\LibraryApplication\\LibraryApplication\\LibraryApplication.Contract\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\csere\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\it\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +26,9 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/kpafjIikRrIULKGgPVJtZTzuNcf5nOjB7CA4wpCRoPDxjyLAob/api": {}
         },
         "frameworks": {
           "net6.0": {
@@ -93,7 +99,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

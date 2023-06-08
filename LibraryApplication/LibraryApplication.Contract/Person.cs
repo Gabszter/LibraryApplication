@@ -10,11 +10,14 @@ namespace LibraryApplication.Contract
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ReaderNumber { get; set; }
+
         [Required]
         [NameValidation]
         public string Name { get; set; }
+
         [Required]
         public string Address { get; set; }
+
         [Required]
         public DateTime BirthDate { get; set; }
     }

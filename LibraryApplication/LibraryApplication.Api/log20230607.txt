@@ -1,0 +1,1049 @@
+2023-06-07 18:29:09.979 +02:00 [INF] Now listening on: https://localhost:7032
+2023-06-07 18:29:10.019 +02:00 [INF] Now listening on: http://localhost:5255
+2023-06-07 18:29:10.023 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-07 18:29:10.023 +02:00 [INF] Hosting environment: Development
+2023-06-07 18:29:10.024 +02:00 [INF] Content root path: C:\Users\it\Documents\Egyetem\LibraryApplication\LibraryApplication\LibraryApplication.Api\
+2023-06-07 18:29:10.634 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - -
+2023-06-07 18:29:11.117 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - -
+2023-06-07 18:29:11.126 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - - - 200 - text/html;charset=utf-8 496.8830ms
+2023-06-07 18:29:11.126 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 7.6566ms
+2023-06-07 18:29:11.131 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - -
+2023-06-07 18:29:11.185 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 53.3571ms
+2023-06-07 18:29:11.279 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - -
+2023-06-07 18:29:11.405 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 126.6048ms
+2023-06-07 18:30:14.890 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7032/Books application/json 123
+2023-06-07 18:30:14.901 +02:00 [INF] CORS policy execution successful.
+2023-06-07 18:30:14.909 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Post (LibraryApplication.Api)'
+2023-06-07 18:30:14.939 +02:00 [INF] Route matched with {action = "Post", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(LibraryApplication.Contract.Book) on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-07 18:30:16.363 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 18:30:18.402 +02:00 [ERR] An error occurred using the connection to database 'LibraryDB' on server '(localdb)\mssqllocaldb'.
+2023-06-07 18:30:18.574 +02:00 [ERR] An exception occurred in the database while saving changes for context type 'LibraryApplication.Api.LibraryContext'.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "LibraryDB" requested by the login. The login failed.
+Login failed for user 'IT2-PC\it'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(IsolationLevel isolationLevel, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+ClientConnectionId:1c43a0b8-6e9b-4496-88c9-fdf6d985bb26
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "LibraryDB" requested by the login. The login failed.
+Login failed for user 'IT2-PC\it'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(IsolationLevel isolationLevel, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+ClientConnectionId:1c43a0b8-6e9b-4496-88c9-fdf6d985bb26
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2023-06-07 18:30:18.655 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Post (LibraryApplication.Api) in 3709.6465ms
+2023-06-07 18:30:18.660 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Post (LibraryApplication.Api)'
+2023-06-07 18:30:18.663 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "LibraryDB" requested by the login. The login failed.
+Login failed for user 'IT2-PC\it'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(IsolationLevel isolationLevel, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+ClientConnectionId:1c43a0b8-6e9b-4496-88c9-fdf6d985bb26
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at LibraryApplication.Api.Controllers.BooksController.Post(Book book) in C:\Users\it\Documents\Egyetem\LibraryApplication\LibraryApplication\LibraryApplication.Api\Controllers\BooksController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-07 18:30:18.705 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7032/Books application/json 123 - 500 - text/plain;+charset=utf-8 3814.9999ms
+2023-06-07 18:30:27.117 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-07 18:30:27.119 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-07 18:30:27.131 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-07 18:30:27.136 +02:00 [INF] Book endpoint was called
+2023-06-07 18:30:27.172 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 18:30:27.453 +02:00 [ERR] An error occurred using the connection to database 'LibraryDB' on server '(localdb)\mssqllocaldb'.
+2023-06-07 18:30:27.462 +02:00 [ERR] An exception occurred while iterating over the results of a query for context type 'LibraryApplication.Api.LibraryContext'.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "LibraryDB" requested by the login. The login failed.
+Login failed for user 'IT2-PC\it'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+ClientConnectionId:e390ad66-ef46-4d5c-81d5-a247bf1dadcd
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "LibraryDB" requested by the login. The login failed.
+Login failed for user 'IT2-PC\it'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+ClientConnectionId:e390ad66-ef46-4d5c-81d5-a247bf1dadcd
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2023-06-07 18:30:27.511 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 377.7997ms
+2023-06-07 18:30:27.513 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-07 18:30:27.514 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "LibraryDB" requested by the login. The login failed.
+Login failed for user 'IT2-PC\it'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+ClientConnectionId:e390ad66-ef46-4d5c-81d5-a247bf1dadcd
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at LibraryApplication.Api.Controllers.BooksController.Get() in C:\Users\it\Documents\Egyetem\LibraryApplication\LibraryApplication\LibraryApplication.Api\Controllers\BooksController.cs:line 39
+   at lambda_method64(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-07 18:30:27.532 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 500 - text/plain;+charset=utf-8 415.0984ms
+2023-06-07 18:31:18.742 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-07 18:31:18.753 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-07 18:31:18.754 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-07 18:31:18.757 +02:00 [INF] Book endpoint was called
+2023-06-07 18:31:18.764 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 18:31:18.775 +02:00 [ERR] An error occurred using the connection to database 'LibraryDB' on server '(localdb)\mssqllocaldb'.
+2023-06-07 18:31:18.778 +02:00 [ERR] An exception occurred while iterating over the results of a query for context type 'LibraryApplication.Api.LibraryContext'.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "LibraryDB" requested by the login. The login failed.
+Login failed for user 'IT2-PC\it'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+ClientConnectionId:72ae636d-19fc-4f84-8bb0-6e7ac871a2c4
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "LibraryDB" requested by the login. The login failed.
+Login failed for user 'IT2-PC\it'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+ClientConnectionId:72ae636d-19fc-4f84-8bb0-6e7ac871a2c4
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2023-06-07 18:31:18.825 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 69.8319ms
+2023-06-07 18:31:18.827 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-07 18:31:18.828 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "LibraryDB" requested by the login. The login failed.
+Login failed for user 'IT2-PC\it'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+ClientConnectionId:72ae636d-19fc-4f84-8bb0-6e7ac871a2c4
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at LibraryApplication.Api.Controllers.BooksController.Get() in C:\Users\it\Documents\Egyetem\LibraryApplication\LibraryApplication\LibraryApplication.Api\Controllers\BooksController.cs:line 39
+   at lambda_method64(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-07 18:31:18.844 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 500 - text/plain;+charset=utf-8 102.5693ms
+2023-06-07 18:31:58.262 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Borrows - -
+2023-06-07 18:31:58.272 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BorrowsController.Get (LibraryApplication.Api)'
+2023-06-07 18:31:58.274 +02:00 [INF] Route matched with {action = "Get", controller = "Borrows"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Borrow]]] Get() on controller LibraryApplication.Api.Controllers.BorrowsController (LibraryApplication.Api).
+2023-06-07 18:31:58.277 +02:00 [INF] Borrow endpoint was called
+2023-06-07 18:31:58.278 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 18:31:58.291 +02:00 [ERR] An error occurred using the connection to database 'LibraryDB' on server '(localdb)\mssqllocaldb'.
+2023-06-07 18:31:58.293 +02:00 [ERR] An exception occurred while iterating over the results of a query for context type 'LibraryApplication.Api.LibraryContext'.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "LibraryDB" requested by the login. The login failed.
+Login failed for user 'IT2-PC\it'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+ClientConnectionId:c9d366a7-d11d-4966-90e5-f42809e13884
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "LibraryDB" requested by the login. The login failed.
+Login failed for user 'IT2-PC\it'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+ClientConnectionId:c9d366a7-d11d-4966-90e5-f42809e13884
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2023-06-07 18:31:58.336 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BorrowsController.Get (LibraryApplication.Api) in 59.6969ms
+2023-06-07 18:31:58.337 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BorrowsController.Get (LibraryApplication.Api)'
+2023-06-07 18:31:58.338 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "LibraryDB" requested by the login. The login failed.
+Login failed for user 'IT2-PC\it'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+ClientConnectionId:c9d366a7-d11d-4966-90e5-f42809e13884
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at LibraryApplication.Api.Controllers.BorrowsController.Get() in C:\Users\it\Documents\Egyetem\LibraryApplication\LibraryApplication\LibraryApplication.Api\Controllers\BorrowsController.cs:line 41
+   at lambda_method74(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-07 18:31:58.355 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Borrows - - - 500 - text/plain;+charset=utf-8 92.8207ms
+2023-06-07 18:33:57.478 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 18:33:58.017 +02:00 [INF] Executed DbCommand (252ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [LibraryDB];
+2023-06-07 18:33:58.082 +02:00 [INF] Executed DbCommand (60ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [LibraryDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2023-06-07 18:33:58.099 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-06-07 18:33:58.192 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2023-06-07 18:33:58.196 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-06-07 18:33:58.218 +02:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-06-07 18:33:58.226 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-06-07 18:33:58.241 +02:00 [INF] Applying migration '20230515233023_Initial'.
+2023-06-07 18:33:58.264 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Books] (
+    [InventoryNumber] int NOT NULL IDENTITY,
+    [Title] nvarchar(max) NOT NULL,
+    [Author] nvarchar(max) NOT NULL,
+    [Publisher] nvarchar(max) NOT NULL,
+    [EditionYear] int NOT NULL,
+    CONSTRAINT [PK_Books] PRIMARY KEY ([InventoryNumber])
+);
+2023-06-07 18:33:58.268 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Borrows] (
+    [Id] int NOT NULL IDENTITY,
+    [ReaderNumber] int NOT NULL,
+    [InventoryNumber] int NOT NULL,
+    [BorrowDate] datetime2 NOT NULL,
+    [ReturnDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_Borrows] PRIMARY KEY ([Id])
+);
+2023-06-07 18:33:58.272 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Persons] (
+    [ReaderNumber] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Address] nvarchar(max) NOT NULL,
+    [BirthDate] datetime2 NOT NULL,
+    CONSTRAINT [PK_Persons] PRIMARY KEY ([ReaderNumber])
+);
+2023-06-07 18:33:58.276 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20230515233023_Initial', N'6.0.16');
+2023-06-07 18:35:13.660 +02:00 [INF] Now listening on: https://localhost:7032
+2023-06-07 18:35:13.716 +02:00 [INF] Now listening on: http://localhost:5255
+2023-06-07 18:35:13.719 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-07 18:35:13.720 +02:00 [INF] Hosting environment: Development
+2023-06-07 18:35:13.721 +02:00 [INF] Content root path: C:\Users\it\Documents\Egyetem\LibraryApplication\LibraryApplication\LibraryApplication.Api\
+2023-06-07 18:35:14.417 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - -
+2023-06-07 18:35:14.746 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - -
+2023-06-07 18:35:14.752 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 5.0262ms
+2023-06-07 18:35:14.752 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - - - 200 - text/html;charset=utf-8 338.4502ms
+2023-06-07 18:35:14.762 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - -
+2023-06-07 18:35:14.778 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 16.3733ms
+2023-06-07 18:35:14.894 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - -
+2023-06-07 18:35:15.011 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 117.2421ms
+2023-06-07 18:35:25.742 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-07 18:35:25.749 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-07 18:35:25.766 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-07 18:35:25.924 +02:00 [INF] Book endpoint was called
+2023-06-07 18:35:26.591 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 18:35:27.249 +02:00 [INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-07 18:35:27.303 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-07 18:35:27.312 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 1540.0041ms
+2023-06-07 18:35:27.314 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-07 18:35:27.322 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 1580.3540ms
+2023-06-07 18:35:42.624 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7032/Books application/json 114
+2023-06-07 18:35:42.628 +02:00 [INF] CORS policy execution successful.
+2023-06-07 18:35:42.630 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Post (LibraryApplication.Api)'
+2023-06-07 18:35:42.642 +02:00 [INF] Route matched with {action = "Post", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(LibraryApplication.Contract.Book) on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-07 18:35:42.678 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 18:35:42.888 +02:00 [INF] Executed DbCommand (32ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Books] ([Author], [EditionYear], [Publisher], [Title])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [InventoryNumber]
+FROM [Books]
+WHERE @@ROWCOUNT = 1 AND [InventoryNumber] = scope_identity();
+2023-06-07 18:35:42.951 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-06-07 18:35:42.953 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Post (LibraryApplication.Api) in 308.4849ms
+2023-06-07 18:35:42.954 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Post (LibraryApplication.Api)'
+2023-06-07 18:35:42.956 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7032/Books application/json 114 - 200 0 - 331.5134ms
+2023-06-07 18:35:46.603 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7032/Books application/json 114
+2023-06-07 18:35:46.605 +02:00 [INF] CORS policy execution successful.
+2023-06-07 18:35:46.607 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Post (LibraryApplication.Api)'
+2023-06-07 18:35:46.608 +02:00 [INF] Route matched with {action = "Post", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(LibraryApplication.Contract.Book) on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-07 18:35:46.648 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 18:35:46.654 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Books] ([Author], [EditionYear], [Publisher], [Title])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [InventoryNumber]
+FROM [Books]
+WHERE @@ROWCOUNT = 1 AND [InventoryNumber] = scope_identity();
+2023-06-07 18:35:46.657 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-06-07 18:35:46.658 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Post (LibraryApplication.Api) in 48.2169ms
+2023-06-07 18:35:46.659 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Post (LibraryApplication.Api)'
+2023-06-07 18:35:46.660 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7032/Books application/json 114 - 200 0 - 56.4187ms
+2023-06-07 18:35:50.751 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-07 18:35:50.752 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-07 18:35:50.754 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-07 18:35:50.755 +02:00 [INF] Book endpoint was called
+2023-06-07 18:35:50.757 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 18:35:50.759 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-07 18:35:50.769 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-07 18:35:50.771 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 15.7967ms
+2023-06-07 18:35:50.773 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-07 18:35:50.773 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 22.7737ms
+2023-06-07 19:59:41.670 +02:00 [INF] Now listening on: https://localhost:7032
+2023-06-07 19:59:41.789 +02:00 [INF] Now listening on: http://localhost:5255
+2023-06-07 19:59:41.794 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-07 19:59:41.797 +02:00 [INF] Hosting environment: Development
+2023-06-07 19:59:41.798 +02:00 [INF] Content root path: C:\Users\it\Documents\Egyetem\LibraryApplication\LibraryApplication\LibraryApplication.Api\
+2023-06-07 19:59:42.121 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - -
+2023-06-07 19:59:42.433 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - -
+2023-06-07 19:59:42.438 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - - - 200 - text/html;charset=utf-8 319.4863ms
+2023-06-07 19:59:42.439 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 6.4070ms
+2023-06-07 19:59:42.449 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - -
+2023-06-07 19:59:42.469 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 19.8113ms
+2023-06-07 19:59:42.584 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - -
+2023-06-07 19:59:42.701 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 117.6856ms
+2023-06-07 20:08:09.809 +02:00 [INF] Now listening on: https://localhost:7032
+2023-06-07 20:08:09.863 +02:00 [INF] Now listening on: http://localhost:5255
+2023-06-07 20:08:09.866 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-07 20:08:09.867 +02:00 [INF] Hosting environment: Development
+2023-06-07 20:08:09.868 +02:00 [INF] Content root path: C:\Users\it\Documents\Egyetem\LibraryApplication\LibraryApplication\LibraryApplication.Api\
+2023-06-07 20:08:10.791 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - -
+2023-06-07 20:08:11.159 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - -
+2023-06-07 20:08:11.166 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 6.9396ms
+2023-06-07 20:08:11.166 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - - - 200 - text/html;charset=utf-8 381.4897ms
+2023-06-07 20:08:11.177 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - -
+2023-06-07 20:08:11.196 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 19.5688ms
+2023-06-07 20:08:11.312 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - -
+2023-06-07 20:08:11.479 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 167.1480ms
+2023-06-07 20:08:14.669 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/People - -
+2023-06-07 20:08:14.673 +02:00 [INF] CORS policy execution successful.
+2023-06-07 20:08:14.677 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/People - - - 404 0 - 7.8456ms
+2023-06-07 20:08:25.055 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-07 20:08:25.063 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-07 20:08:25.079 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-07 20:08:25.240 +02:00 [INF] Book endpoint was called
+2023-06-07 20:08:25.940 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 20:08:26.614 +02:00 [INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-07 20:08:26.726 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-07 20:08:26.736 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 1650.1752ms
+2023-06-07 20:08:26.738 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-07 20:08:26.747 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 1691.4056ms
+2023-06-07 20:12:40.032 +02:00 [INF] Now listening on: https://localhost:7032
+2023-06-07 20:12:40.081 +02:00 [INF] Now listening on: http://localhost:5255
+2023-06-07 20:12:40.084 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-07 20:12:40.085 +02:00 [INF] Hosting environment: Development
+2023-06-07 20:12:40.085 +02:00 [INF] Content root path: C:\Users\it\Documents\Egyetem\LibraryApplication\LibraryApplication\LibraryApplication.Api\
+2023-06-07 20:12:40.700 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - -
+2023-06-07 20:12:41.023 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - -
+2023-06-07 20:12:41.033 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - - - 200 - text/html;charset=utf-8 335.4760ms
+2023-06-07 20:12:41.033 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 9.4233ms
+2023-06-07 20:12:41.041 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - -
+2023-06-07 20:12:41.064 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 22.8080ms
+2023-06-07 20:12:41.186 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - -
+2023-06-07 20:12:41.369 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 182.8644ms
+2023-06-07 20:12:44.824 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/People - -
+2023-06-07 20:12:44.828 +02:00 [INF] CORS policy execution successful.
+2023-06-07 20:12:44.832 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/People - - - 404 0 - 8.0741ms
+2023-06-07 20:15:33.772 +02:00 [INF] Now listening on: https://localhost:7032
+2023-06-07 20:15:33.829 +02:00 [INF] Now listening on: http://localhost:5255
+2023-06-07 20:15:33.832 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-07 20:15:33.833 +02:00 [INF] Hosting environment: Development
+2023-06-07 20:15:33.834 +02:00 [INF] Content root path: C:\Users\it\Documents\Egyetem\LibraryApplication\LibraryApplication\LibraryApplication.Api\
+2023-06-07 20:15:34.386 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - -
+2023-06-07 20:15:34.691 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - -
+2023-06-07 20:15:34.701 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - - - 200 - text/html;charset=utf-8 317.4396ms
+2023-06-07 20:15:34.701 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 8.2430ms
+2023-06-07 20:15:34.711 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - -
+2023-06-07 20:15:34.730 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 19.5002ms
+2023-06-07 20:15:34.846 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - -
+2023-06-07 20:15:35.005 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 158.9643ms
+2023-06-07 20:15:38.269 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/People - -
+2023-06-07 20:15:38.273 +02:00 [INF] CORS policy execution successful.
+2023-06-07 20:15:38.280 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/People - - - 404 0 - 11.2821ms
+2023-06-07 20:18:52.374 +02:00 [INF] Now listening on: https://localhost:7032
+2023-06-07 20:18:52.438 +02:00 [INF] Now listening on: http://localhost:5255
+2023-06-07 20:18:52.442 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-07 20:18:52.444 +02:00 [INF] Hosting environment: Development
+2023-06-07 20:18:52.446 +02:00 [INF] Content root path: C:\Users\it\Documents\Egyetem\LibraryApplication\LibraryApplication\LibraryApplication.Api\
+2023-06-07 20:18:52.966 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - -
+2023-06-07 20:18:53.289 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - -
+2023-06-07 20:18:53.298 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 8.0578ms
+2023-06-07 20:18:53.298 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - - - 200 - text/html;charset=utf-8 338.4035ms
+2023-06-07 20:18:53.315 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - -
+2023-06-07 20:18:53.333 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 18.5642ms
+2023-06-07 20:18:53.442 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - -
+2023-06-07 20:18:53.574 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 131.3176ms
+2023-06-07 20:19:09.182 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-07 20:19:09.191 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-07 20:19:09.206 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-07 20:19:09.372 +02:00 [INF] Book endpoint was called
+2023-06-07 20:19:10.066 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 20:19:10.720 +02:00 [INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-07 20:19:10.831 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-07 20:19:10.840 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 1628.3177ms
+2023-06-07 20:19:10.842 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-07 20:19:10.851 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 1669.4906ms
+2023-06-07 20:19:28.706 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons - -
+2023-06-07 20:19:28.707 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 20:19:28.713 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Person]]] Get() on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-07 20:19:28.717 +02:00 [INF] People endpoint was called
+2023-06-07 20:19:28.725 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 20:19:28.755 +02:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+2023-06-07 20:19:28.757 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Person, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-07 20:19:28.761 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 44.7239ms
+2023-06-07 20:19:28.763 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 20:19:28.764 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons - - - 200 - application/json;+charset=utf-8 58.2037ms
+2023-06-07 20:19:43.539 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons - -
+2023-06-07 20:19:43.541 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 20:19:43.542 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Person]]] Get() on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-07 20:19:43.546 +02:00 [INF] People endpoint was called
+2023-06-07 20:19:43.586 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 20:19:43.591 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+2023-06-07 20:19:43.595 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Person, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-07 20:19:43.596 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 51.4315ms
+2023-06-07 20:19:43.600 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 20:19:43.602 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons - - - 200 - application/json;+charset=utf-8 63.1321ms
+2023-06-07 20:19:43.666 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/favicon.ico - -
+2023-06-07 20:19:43.667 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/favicon.ico - - - 404 0 - 1.2519ms
+2023-06-07 20:20:33.841 +02:00 [INF] Now listening on: https://localhost:7032
+2023-06-07 20:20:33.896 +02:00 [INF] Now listening on: http://localhost:5255
+2023-06-07 20:20:33.899 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-07 20:20:33.900 +02:00 [INF] Hosting environment: Development
+2023-06-07 20:20:33.901 +02:00 [INF] Content root path: C:\Users\it\Documents\Egyetem\LibraryApplication\LibraryApplication\LibraryApplication.Api\
+2023-06-07 20:20:34.813 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - -
+2023-06-07 20:20:35.129 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - -
+2023-06-07 20:20:35.136 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - - - 200 - text/html;charset=utf-8 326.9329ms
+2023-06-07 20:20:35.136 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 5.7265ms
+2023-06-07 20:20:35.154 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - -
+2023-06-07 20:20:35.190 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 35.1998ms
+2023-06-07 20:20:35.283 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - -
+2023-06-07 20:20:35.458 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 175.0342ms
+2023-06-07 20:20:38.325 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons - -
+2023-06-07 20:20:38.330 +02:00 [INF] CORS policy execution successful.
+2023-06-07 20:20:38.337 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 20:20:38.354 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Person]]] Get() on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-07 20:20:38.517 +02:00 [INF] People endpoint was called
+2023-06-07 20:20:39.204 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 20:20:39.877 +02:00 [INF] Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+2023-06-07 20:20:39.928 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Person, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-07 20:20:39.938 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 1577.9851ms
+2023-06-07 20:20:39.941 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 20:20:39.950 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons - - - 200 - application/json;+charset=utf-8 1625.1509ms
+2023-06-07 20:40:47.970 +02:00 [INF] Now listening on: https://localhost:7032
+2023-06-07 20:40:48.009 +02:00 [INF] Now listening on: http://localhost:5255
+2023-06-07 20:40:48.014 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-07 20:40:48.015 +02:00 [INF] Hosting environment: Development
+2023-06-07 20:40:48.015 +02:00 [INF] Content root path: C:\Users\it\Documents\Egyetem\LibraryApplication\LibraryApplication\LibraryApplication.Api\
+2023-06-07 20:40:48.748 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - -
+2023-06-07 20:40:49.327 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - - - 200 - text/html;charset=utf-8 582.5813ms
+2023-06-07 20:40:49.400 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - -
+2023-06-07 20:40:49.400 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - -
+2023-06-07 20:40:49.442 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 41.9005ms
+2023-06-07 20:40:49.557 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 157.5808ms
+2023-06-07 20:40:49.685 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - -
+2023-06-07 20:40:49.874 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 189.1642ms
+2023-06-07 20:41:29.737 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons - -
+2023-06-07 20:41:29.741 +02:00 [INF] CORS policy execution successful.
+2023-06-07 20:41:29.751 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 20:41:29.767 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Person]]] Get() on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-07 20:41:29.929 +02:00 [INF] People endpoint was called
+2023-06-07 20:41:30.617 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 20:41:31.218 +02:00 [INF] Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+2023-06-07 20:41:31.267 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Person, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-07 20:41:31.277 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 1504.4995ms
+2023-06-07 20:41:31.280 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 20:41:31.289 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons - - - 200 - application/json;+charset=utf-8 1551.3488ms
+2023-06-07 20:42:09.785 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons - -
+2023-06-07 20:42:09.787 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 20:42:09.789 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Person]]] Get() on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-07 20:42:09.792 +02:00 [INF] People endpoint was called
+2023-06-07 20:42:09.806 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 20:42:09.815 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+2023-06-07 20:42:09.819 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Person, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-07 20:42:09.820 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 28.6369ms
+2023-06-07 20:42:09.821 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 20:42:09.822 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons - - - 200 - application/json;+charset=utf-8 37.4601ms
+2023-06-07 20:42:17.037 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons - -
+2023-06-07 20:42:17.038 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 20:42:17.039 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Person]]] Get() on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-07 20:42:17.043 +02:00 [INF] People endpoint was called
+2023-06-07 20:42:17.082 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 20:42:17.087 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+2023-06-07 20:42:17.089 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Person, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-07 20:42:17.090 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 48.5774ms
+2023-06-07 20:42:17.091 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 20:42:17.092 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons - - - 200 - application/json;+charset=utf-8 55.4143ms
+2023-06-07 20:42:27.011 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7032/Persons application/json 109
+2023-06-07 20:42:27.013 +02:00 [INF] CORS policy execution successful.
+2023-06-07 20:42:27.013 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Post (LibraryApplication.Api)'
+2023-06-07 20:42:27.026 +02:00 [INF] Route matched with {action = "Post", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(LibraryApplication.Contract.Person) on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-07 20:42:27.058 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 20:42:27.270 +02:00 [INF] Executed DbCommand (31ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Persons] ([Address], [BirthDate], [Name])
+VALUES (@p0, @p1, @p2);
+SELECT [ReaderNumber]
+FROM [Persons]
+WHERE @@ROWCOUNT = 1 AND [ReaderNumber] = scope_identity();
+2023-06-07 20:42:27.341 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-06-07 20:42:27.342 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Post (LibraryApplication.Api) in 313.4119ms
+2023-06-07 20:42:27.343 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Post (LibraryApplication.Api)'
+2023-06-07 20:42:27.345 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7032/Persons application/json 109 - 200 0 - 333.8663ms
+2023-06-07 20:42:31.347 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7032/Persons application/json 109
+2023-06-07 20:42:31.348 +02:00 [INF] CORS policy execution successful.
+2023-06-07 20:42:31.349 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Post (LibraryApplication.Api)'
+2023-06-07 20:42:31.350 +02:00 [INF] Route matched with {action = "Post", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(LibraryApplication.Contract.Person) on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-07 20:42:31.353 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 20:42:31.357 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Persons] ([Address], [BirthDate], [Name])
+VALUES (@p0, @p1, @p2);
+SELECT [ReaderNumber]
+FROM [Persons]
+WHERE @@ROWCOUNT = 1 AND [ReaderNumber] = scope_identity();
+2023-06-07 20:42:31.362 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-06-07 20:42:31.363 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Post (LibraryApplication.Api) in 10.7058ms
+2023-06-07 20:42:31.364 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Post (LibraryApplication.Api)'
+2023-06-07 20:42:31.365 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7032/Persons application/json 109 - 200 0 - 17.5005ms
+2023-06-07 20:42:35.790 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons - -
+2023-06-07 20:42:35.791 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 20:42:35.792 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Person]]] Get() on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-07 20:42:35.794 +02:00 [INF] People endpoint was called
+2023-06-07 20:42:35.795 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 20:42:35.798 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+2023-06-07 20:42:35.809 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Person, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-07 20:42:35.813 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 18.9992ms
+2023-06-07 20:42:35.815 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 20:42:35.815 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons - - - 200 - application/json;+charset=utf-8 25.7954ms
+2023-06-07 20:42:51.755 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons - -
+2023-06-07 20:42:51.757 +02:00 [INF] CORS policy execution successful.
+2023-06-07 20:42:51.758 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 20:42:51.758 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Person]]] Get() on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-07 20:42:51.760 +02:00 [INF] People endpoint was called
+2023-06-07 20:42:51.761 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 20:42:51.763 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+2023-06-07 20:42:51.766 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Person, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-07 20:42:51.767 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 7.0577ms
+2023-06-07 20:42:51.768 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 20:42:51.769 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons - - - 200 - application/json;+charset=utf-8 13.5732ms
+2023-06-07 20:57:08.468 +02:00 [INF] Now listening on: https://localhost:7032
+2023-06-07 20:57:08.517 +02:00 [INF] Now listening on: http://localhost:5255
+2023-06-07 20:57:08.521 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-07 20:57:08.522 +02:00 [INF] Hosting environment: Development
+2023-06-07 20:57:08.522 +02:00 [INF] Content root path: C:\Users\it\Documents\Egyetem\LibraryApplication\LibraryApplication\LibraryApplication.Api\
+2023-06-07 20:57:09.741 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - -
+2023-06-07 20:57:10.134 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - -
+2023-06-07 20:57:10.135 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - - - 200 - text/html;charset=utf-8 398.2332ms
+2023-06-07 20:57:10.168 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 27.5677ms
+2023-06-07 20:57:10.172 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - -
+2023-06-07 20:57:10.194 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 21.3743ms
+2023-06-07 20:57:10.323 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - -
+2023-06-07 20:57:10.483 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 159.4624ms
+2023-06-07 20:57:23.362 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons/0 - -
+2023-06-07 20:57:23.370 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 20:57:23.393 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-07 20:57:24.245 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 20:57:25.066 +02:00 [INF] Executed DbCommand (71ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+WHERE [p].[ReaderNumber] = @__p_0
+2023-06-07 20:57:25.118 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2023-06-07 20:57:25.131 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 1729.1633ms
+2023-06-07 20:57:25.134 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 20:57:25.142 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons/0 - - - 404 - application/problem+json;+charset=utf-8 1780.2772ms
+2023-06-07 20:57:55.735 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons/1 - -
+2023-06-07 20:57:55.740 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 20:57:55.741 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-07 20:57:55.774 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 20:57:55.785 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+WHERE [p].[ReaderNumber] = @__p_0
+2023-06-07 20:57:55.787 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2023-06-07 20:57:55.788 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 45.4164ms
+2023-06-07 20:57:55.790 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 20:57:55.790 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons/1 - - - 404 - application/problem+json;+charset=utf-8 56.0591ms
+2023-06-07 20:57:59.014 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons/1 - -
+2023-06-07 20:57:59.016 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 20:57:59.017 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-07 20:57:59.028 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 20:57:59.032 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+WHERE [p].[ReaderNumber] = @__p_0
+2023-06-07 20:57:59.035 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2023-06-07 20:57:59.036 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 16.6677ms
+2023-06-07 20:57:59.037 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 20:57:59.038 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons/1 - - - 404 - application/problem+json;+charset=utf-8 23.1202ms
+2023-06-07 20:58:05.085 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons - -
+2023-06-07 20:58:05.086 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 20:58:05.090 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Person]]] Get() on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-07 20:58:05.093 +02:00 [INF] People endpoint was called
+2023-06-07 20:58:05.098 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 20:58:05.105 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+2023-06-07 20:58:05.167 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Person, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-07 20:58:05.172 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 80.6779ms
+2023-06-07 20:58:05.175 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 20:58:05.176 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons - - - 200 - application/json;+charset=utf-8 91.5651ms
+2023-06-07 20:58:14.999 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons/2 - -
+2023-06-07 20:58:15.000 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 20:58:15.002 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-07 20:58:15.003 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 20:58:15.007 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+WHERE [p].[ReaderNumber] = @__p_0
+2023-06-07 20:58:15.012 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-07 20:58:15.056 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b0].[Title], [b].[ReturnDate]
+FROM [Borrows] AS [b]
+INNER JOIN [Persons] AS [p] ON [b].[ReaderNumber] = [p].[ReaderNumber]
+INNER JOIN [Books] AS [b0] ON [b].[InventoryNumber] = [b0].[InventoryNumber]
+WHERE [p].[ReaderNumber] = @__id_0
+2023-06-07 20:58:15.066 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 62.7341ms
+2023-06-07 20:58:15.067 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 20:58:15.068 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons/2 - - - 200 - application/json;+charset=utf-8 68.6642ms
+2023-06-07 21:50:59.882 +02:00 [INF] Now listening on: https://localhost:7032
+2023-06-07 21:50:59.949 +02:00 [INF] Now listening on: http://localhost:5255
+2023-06-07 21:50:59.965 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-07 21:50:59.977 +02:00 [INF] Hosting environment: Development
+2023-06-07 21:50:59.979 +02:00 [INF] Content root path: C:\Users\it\Documents\Egyetem\LibraryApplication\LibraryApplication\LibraryApplication.Api\
+2023-06-07 21:51:01.321 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - -
+2023-06-07 21:51:01.858 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - -
+2023-06-07 21:51:01.866 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 7.0299ms
+2023-06-07 21:51:01.866 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - - - 200 - text/html;charset=utf-8 552.8072ms
+2023-06-07 21:51:01.883 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - -
+2023-06-07 21:51:01.904 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 21.3491ms
+2023-06-07 21:51:02.033 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - -
+2023-06-07 21:51:02.189 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 156.6647ms
+2023-06-07 21:51:08.836 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons - -
+2023-06-07 21:51:08.841 +02:00 [INF] CORS policy execution successful.
+2023-06-07 21:51:08.850 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 21:51:08.869 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Person]]] Get() on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-07 21:51:09.040 +02:00 [INF] People endpoint was called
+2023-06-07 21:51:09.725 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 21:51:10.332 +02:00 [INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+2023-06-07 21:51:10.442 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Person, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-07 21:51:10.454 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 1579.1724ms
+2023-06-07 21:51:10.458 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 21:51:10.466 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons - - - 200 - application/json;+charset=utf-8 1630.1655ms
+2023-06-07 21:51:12.383 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Person/2 - -
+2023-06-07 21:51:12.384 +02:00 [INF] CORS policy execution successful.
+2023-06-07 21:51:12.385 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Person/2 - - - 404 0 - 2.1687ms
+2023-06-07 21:52:00.982 +02:00 [INF] Now listening on: https://localhost:7032
+2023-06-07 21:52:01.024 +02:00 [INF] Now listening on: http://localhost:5255
+2023-06-07 21:52:01.027 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-07 21:52:01.028 +02:00 [INF] Hosting environment: Development
+2023-06-07 21:52:01.029 +02:00 [INF] Content root path: C:\Users\it\Documents\Egyetem\LibraryApplication\LibraryApplication\LibraryApplication.Api\
+2023-06-07 21:52:02.739 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - -
+2023-06-07 21:52:03.204 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - -
+2023-06-07 21:52:03.211 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 5.3355ms
+2023-06-07 21:52:03.211 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - - - 200 - text/html;charset=utf-8 478.8023ms
+2023-06-07 21:52:03.217 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - -
+2023-06-07 21:52:03.236 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 19.1872ms
+2023-06-07 21:52:03.362 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - -
+2023-06-07 21:52:03.534 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 171.9322ms
+2023-06-07 21:52:06.983 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons - -
+2023-06-07 21:52:06.988 +02:00 [INF] CORS policy execution successful.
+2023-06-07 21:52:06.994 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 21:52:07.014 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Person]]] Get() on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-07 21:52:07.183 +02:00 [INF] People endpoint was called
+2023-06-07 21:52:07.896 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 21:52:08.512 +02:00 [INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+2023-06-07 21:52:08.628 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Person, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-07 21:52:08.641 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 1620.8495ms
+2023-06-07 21:52:08.644 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 21:52:08.653 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons - - - 200 - application/json;+charset=utf-8 1670.3786ms
+2023-06-07 21:52:34.207 +02:00 [INF] Now listening on: https://localhost:7032
+2023-06-07 21:52:34.261 +02:00 [INF] Now listening on: http://localhost:5255
+2023-06-07 21:52:34.265 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-07 21:52:34.266 +02:00 [INF] Hosting environment: Development
+2023-06-07 21:52:34.267 +02:00 [INF] Content root path: C:\Users\it\Documents\Egyetem\LibraryApplication\LibraryApplication\LibraryApplication.Api\
+2023-06-07 21:52:35.402 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - -
+2023-06-07 21:52:35.983 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - -
+2023-06-07 21:52:35.990 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - - - 200 - text/html;charset=utf-8 593.2350ms
+2023-06-07 21:52:35.992 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - -
+2023-06-07 21:52:35.997 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 14.5398ms
+2023-06-07 21:52:36.047 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 55.2384ms
+2023-06-07 21:52:36.181 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - -
+2023-06-07 21:52:36.389 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 208.7115ms
+2023-06-07 21:52:39.980 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons - -
+2023-06-07 21:52:39.986 +02:00 [INF] CORS policy execution successful.
+2023-06-07 21:52:39.993 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 21:52:40.022 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Person]]] Get() on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-07 21:52:40.196 +02:00 [INF] People endpoint was called
+2023-06-07 21:52:40.880 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 21:52:41.509 +02:00 [INF] Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+2023-06-07 21:52:41.620 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Person, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-07 21:52:41.632 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 1602.1313ms
+2023-06-07 21:52:41.634 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 21:52:41.642 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons - - - 200 - application/json;+charset=utf-8 1662.2004ms
+2023-06-07 21:52:43.208 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons/2 - -
+2023-06-07 21:52:43.209 +02:00 [INF] CORS policy execution successful.
+2023-06-07 21:52:43.209 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 21:52:43.222 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-07 21:52:43.240 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-07 21:52:43.450 +02:00 [INF] Executed DbCommand (30ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+WHERE [p].[ReaderNumber] = @__p_0
+2023-06-07 21:52:43.458 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-07 21:52:43.498 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b0].[Title], [b].[ReturnDate]
+FROM [Borrows] AS [b]
+INNER JOIN [Persons] AS [p] ON [b].[ReaderNumber] = [p].[ReaderNumber]
+INNER JOIN [Books] AS [b0] ON [b].[InventoryNumber] = [b0].[InventoryNumber]
+WHERE [p].[ReaderNumber] = @__id_0
+2023-06-07 21:52:43.505 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 280.7701ms
+2023-06-07 21:52:43.506 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-07 21:52:43.507 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons/2 - - - 200 - application/json;+charset=utf-8 299.6587ms
