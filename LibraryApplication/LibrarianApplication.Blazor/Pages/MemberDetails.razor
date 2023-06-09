@@ -1,0 +1,50 @@
+﻿@page "/persons/{id:int}"
+@using LibrarianApplication.Blazor.Model;
+@using LibrarianApplication.Blazor.Services
+@inject IPersonService PersonService
+@inject IBorrowService BorrowService
+@inject NavigationManager NavigationManager
+
+@if (Person is null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <h3>@Person.Name's borrowed books</h3>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>InventoryNumber</th>
+                <th>Borrow Date</th>
+                <th>Return Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var borrow in Borrows)
+            {
+                <tr>
+                    <td>@borrow.Title</td>
+                    <td>@borrow.BorrowDate</td>
+                    <td>@borrow.ReturnDate</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="persons" class="btn btn-primary">Back to members list</a>
+}
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private Person? Person { get; set; }
+
+    private IEnumerable<Borrow>? Borrows {get;set;}
+
+    protected override async Task OnInitializedAsync()
+    {
+        Person = await PersonService.GetPersonByIdAsync(Id);
+        Borrows = await BorrowService.GetBorrowByName(Person.Name);
+    }
+}

@@ -44,6 +44,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVtYmVyQWRkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/it/Documents/Egyetem/LibraryApplication/LibraryApplication/LibrarianApplication.Blazor/Pages/MemberDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVtYmVyRGV0YWlscy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/it/Documents/Egyetem/LibraryApplication/LibraryApplication/LibrarianApplication.Blazor/Pages/MemberEdit.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVtYmVyRWRpdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

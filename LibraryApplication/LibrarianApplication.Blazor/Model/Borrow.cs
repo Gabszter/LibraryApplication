@@ -18,6 +18,7 @@ namespace LibrarianApplication.Blazor.Model
         [Required]
         [LaterThan(nameof(BorrowDate))]
         public DateTime ReturnDate { get; set; }
+        public string Title { get; set; }
     }
 }
 
