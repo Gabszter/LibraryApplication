@@ -32,6 +32,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va1N0YXR1cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/it/Documents/Egyetem/LibraryApplication/LibraryApplication/LibrarianApplication.Blazor/Pages/Borrowing.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9ycm93aW5nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/it/Documents/Egyetem/LibraryApplication/LibraryApplication/LibrarianApplication.Blazor/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -40,8 +44,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVtYmVyQWRkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/it/Documents/Egyetem/LibraryApplication/LibraryApplication/LibrarianApplication.Blazor/Pages/MemberDetails.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVtYmVyRGV0YWlscy5yYXpvcg==
+[C:/Users/it/Documents/Egyetem/LibraryApplication/LibraryApplication/LibrarianApplication.Blazor/Pages/MemberEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVtYmVyRWRpdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/it/Documents/Egyetem/LibraryApplication/LibraryApplication/LibrarianApplication.Blazor/Pages/MemberList.razor]
@@ -50,6 +54,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/it/Documents/Egyetem/LibraryApplication/LibraryApplication/LibrarianApplication.Blazor/Shared/BookForm.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEJvb2tGb3JtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/it/Documents/Egyetem/LibraryApplication/LibraryApplication/LibrarianApplication.Blazor/Shared/BorrowForm.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEJvcnJvd0Zvcm0ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/it/Documents/Egyetem/LibraryApplication/LibraryApplication/LibrarianApplication.Blazor/Shared/MemberForm.razor]

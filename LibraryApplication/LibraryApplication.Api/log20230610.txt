@@ -1,0 +1,1546 @@
+2023-06-10 00:22:56.728 +02:00 [INF] Now listening on: https://localhost:7032
+2023-06-10 00:22:56.784 +02:00 [INF] Now listening on: http://localhost:5255
+2023-06-10 00:22:56.792 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-10 00:22:56.793 +02:00 [INF] Hosting environment: Development
+2023-06-10 00:22:56.794 +02:00 [INF] Content root path: C:\Users\it\Documents\Egyetem\LibraryApplication\LibraryApplication\LibraryApplication.Api\
+2023-06-10 00:22:59.368 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - -
+2023-06-10 00:23:00.109 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - - - 200 - text/html;charset=utf-8 744.1233ms
+2023-06-10 00:23:00.112 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - -
+2023-06-10 00:23:00.114 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - -
+2023-06-10 00:23:00.146 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 33.8626ms
+2023-06-10 00:23:00.279 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 164.7678ms
+2023-06-10 00:23:00.462 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - -
+2023-06-10 00:23:00.704 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 242.0374ms
+2023-06-10 00:31:46.465 +02:00 [INF] Now listening on: https://localhost:7032
+2023-06-10 00:31:46.537 +02:00 [INF] Now listening on: http://localhost:5255
+2023-06-10 00:31:46.542 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-10 00:31:46.549 +02:00 [INF] Hosting environment: Development
+2023-06-10 00:31:46.550 +02:00 [INF] Content root path: C:\Users\it\Documents\Egyetem\LibraryApplication\LibraryApplication\LibraryApplication.Api\
+2023-06-10 00:31:47.522 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - -
+2023-06-10 00:31:50.168 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - - - 200 - text/html;charset=utf-8 2652.8978ms
+2023-06-10 00:31:50.185 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - -
+2023-06-10 00:31:50.201 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - -
+2023-06-10 00:31:50.300 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 114.9945ms
+2023-06-10 00:31:50.405 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 203.0673ms
+2023-06-10 00:31:50.616 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - -
+2023-06-10 00:31:50.997 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 380.5748ms
+2023-06-10 00:32:26.020 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7032/Borrows - -
+2023-06-10 00:32:26.026 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:32:26.028 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7032/Borrows - - - 204 - - 8.3726ms
+2023-06-10 00:32:26.029 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7032/Borrows application/json;+charset=utf-8 115
+2023-06-10 00:32:26.030 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:32:26.036 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BorrowsController.Post (LibraryApplication.Api)'
+2023-06-10 00:32:26.062 +02:00 [INF] Route matched with {action = "Post", controller = "Borrows"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(LibraryApplication.Contract.Borrow) on controller LibraryApplication.Api.Controllers.BorrowsController (LibraryApplication.Api).
+2023-06-10 00:32:27.021 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:32:28.892 +02:00 [INF] Executed DbCommand (71ms) [Parameters=[@__borrow_InventoryNumber_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Borrows] AS [b]
+        WHERE [b].[InventoryNumber] = @__borrow_InventoryNumber_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-06-10 00:32:29.118 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Borrows] ([BorrowDate], [InventoryNumber], [ReaderNumber], [ReturnDate])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Borrows]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-06-10 00:32:29.182 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-06-10 00:32:29.188 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BorrowsController.Post (LibraryApplication.Api) in 3120.7126ms
+2023-06-10 00:32:29.191 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BorrowsController.Post (LibraryApplication.Api)'
+2023-06-10 00:32:29.200 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7032/Borrows application/json;+charset=utf-8 115 - 200 0 - 3170.4235ms
+2023-06-10 00:32:29.213 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:32:29.214 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:32:29.215 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:32:29.221 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:32:29.226 +02:00 [INF] Book endpoint was called
+2023-06-10 00:32:29.238 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:32:29.280 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:32:29.312 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:32:29.316 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 91.6785ms
+2023-06-10 00:32:29.317 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:32:29.318 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 105.2383ms
+2023-06-10 00:32:40.300 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books/GetById/7 - -
+2023-06-10 00:32:40.302 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:32:40.303 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:32:40.307 +02:00 [INF] Route matched with {action = "GetById", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetById(Int32) on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:32:40.350 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:32:40.469 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Title], CASE
+    WHEN [b1].[Id] IS NULL THEN N'In'
+    ELSE N'Borrowed'
+END AS [Status], CASE
+    WHEN [p].[ReaderNumber] IS NULL THEN N''
+    ELSE [p].[Name]
+END AS [Borrower], CASE
+    WHEN [b1].[Id] IS NULL THEN N''
+    ELSE CONVERT(varchar(100), [b1].[ReturnDate])
+END AS [DueDate]
+FROM [Books] AS [b]
+INNER JOIN [Books] AS [b0] ON [b].[InventoryNumber] = [b0].[InventoryNumber]
+LEFT JOIN [Borrows] AS [b1] ON [b0].[InventoryNumber] = [b1].[InventoryNumber]
+LEFT JOIN [Persons] AS [p] ON [b1].[ReaderNumber] = [p].[ReaderNumber]
+WHERE [b].[InventoryNumber] = @__id_0
+2023-06-10 00:32:40.474 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`4[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-10 00:32:40.477 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api) in 167.7985ms
+2023-06-10 00:32:40.478 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:32:40.479 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books/GetById/7 - - - 200 - application/json;+charset=utf-8 178.4355ms
+2023-06-10 00:32:43.567 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:32:43.568 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:32:43.569 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:32:43.570 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:32:43.573 +02:00 [INF] Book endpoint was called
+2023-06-10 00:32:43.574 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:32:43.576 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:32:43.578 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:32:43.579 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 6.8215ms
+2023-06-10 00:32:43.580 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:32:43.581 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 13.8319ms
+2023-06-10 00:33:04.061 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7032/Borrows - -
+2023-06-10 00:33:04.063 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:33:04.064 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7032/Borrows - - - 204 - - 2.7643ms
+2023-06-10 00:33:04.065 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7032/Borrows application/json;+charset=utf-8 115
+2023-06-10 00:33:04.066 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:33:04.067 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BorrowsController.Post (LibraryApplication.Api)'
+2023-06-10 00:33:04.068 +02:00 [INF] Route matched with {action = "Post", controller = "Borrows"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(LibraryApplication.Contract.Borrow) on controller LibraryApplication.Api.Controllers.BorrowsController (LibraryApplication.Api).
+2023-06-10 00:33:04.070 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:33:04.076 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__borrow_InventoryNumber_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Borrows] AS [b]
+        WHERE [b].[InventoryNumber] = @__borrow_InventoryNumber_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-06-10 00:33:04.079 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Borrows] ([BorrowDate], [InventoryNumber], [ReaderNumber], [ReturnDate])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Borrows]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-06-10 00:33:04.082 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-06-10 00:33:04.083 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BorrowsController.Post (LibraryApplication.Api) in 13.9314ms
+2023-06-10 00:33:04.084 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BorrowsController.Post (LibraryApplication.Api)'
+2023-06-10 00:33:04.084 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7032/Borrows application/json;+charset=utf-8 115 - 200 0 - 19.5151ms
+2023-06-10 00:33:04.089 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:33:04.091 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:33:04.092 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:33:04.093 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:33:04.098 +02:00 [INF] Book endpoint was called
+2023-06-10 00:33:04.099 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:33:04.102 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:33:04.106 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:33:04.108 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 10.1889ms
+2023-06-10 00:33:04.109 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:33:04.110 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 20.8883ms
+2023-06-10 00:33:06.616 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books/GetById/7 - -
+2023-06-10 00:33:06.618 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:33:06.619 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:33:06.620 +02:00 [INF] Route matched with {action = "GetById", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetById(Int32) on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:33:06.622 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:33:06.626 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Title], CASE
+    WHEN [b1].[Id] IS NULL THEN N'In'
+    ELSE N'Borrowed'
+END AS [Status], CASE
+    WHEN [p].[ReaderNumber] IS NULL THEN N''
+    ELSE [p].[Name]
+END AS [Borrower], CASE
+    WHEN [b1].[Id] IS NULL THEN N''
+    ELSE CONVERT(varchar(100), [b1].[ReturnDate])
+END AS [DueDate]
+FROM [Books] AS [b]
+INNER JOIN [Books] AS [b0] ON [b].[InventoryNumber] = [b0].[InventoryNumber]
+LEFT JOIN [Borrows] AS [b1] ON [b0].[InventoryNumber] = [b1].[InventoryNumber]
+LEFT JOIN [Persons] AS [p] ON [b1].[ReaderNumber] = [p].[ReaderNumber]
+WHERE [b].[InventoryNumber] = @__id_0
+2023-06-10 00:33:06.629 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`4[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-10 00:33:06.630 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api) in 8.6019ms
+2023-06-10 00:33:06.631 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:33:06.632 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books/GetById/7 - - - 200 - application/json;+charset=utf-8 15.6541ms
+2023-06-10 00:33:10.416 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:33:10.418 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:33:10.419 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:33:10.420 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:33:10.423 +02:00 [INF] Book endpoint was called
+2023-06-10 00:33:10.424 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:33:10.426 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:33:10.428 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:33:10.429 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 6.4348ms
+2023-06-10 00:33:10.430 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:33:10.431 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 14.8392ms
+2023-06-10 00:33:11.592 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books/GetById/7 - -
+2023-06-10 00:33:11.594 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:33:11.596 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:33:11.597 +02:00 [INF] Route matched with {action = "GetById", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetById(Int32) on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:33:11.599 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:33:11.601 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Title], CASE
+    WHEN [b1].[Id] IS NULL THEN N'In'
+    ELSE N'Borrowed'
+END AS [Status], CASE
+    WHEN [p].[ReaderNumber] IS NULL THEN N''
+    ELSE [p].[Name]
+END AS [Borrower], CASE
+    WHEN [b1].[Id] IS NULL THEN N''
+    ELSE CONVERT(varchar(100), [b1].[ReturnDate])
+END AS [DueDate]
+FROM [Books] AS [b]
+INNER JOIN [Books] AS [b0] ON [b].[InventoryNumber] = [b0].[InventoryNumber]
+LEFT JOIN [Borrows] AS [b1] ON [b0].[InventoryNumber] = [b1].[InventoryNumber]
+LEFT JOIN [Persons] AS [p] ON [b1].[ReaderNumber] = [p].[ReaderNumber]
+WHERE [b].[InventoryNumber] = @__id_0
+2023-06-10 00:33:11.604 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`4[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-10 00:33:11.607 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api) in 8.3239ms
+2023-06-10 00:33:11.608 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:33:11.608 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books/GetById/7 - - - 200 - application/json;+charset=utf-8 16.0579ms
+2023-06-10 00:33:25.625 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:33:25.631 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:33:25.631 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:33:25.632 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:33:25.633 +02:00 [INF] Book endpoint was called
+2023-06-10 00:33:25.634 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:33:25.636 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:33:25.639 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:33:25.640 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 7.274ms
+2023-06-10 00:33:25.641 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:33:25.642 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 16.7555ms
+2023-06-10 00:33:28.447 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons - -
+2023-06-10 00:33:28.448 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:33:28.448 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:33:28.451 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Person]]] Get() on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-10 00:33:28.453 +02:00 [INF] People endpoint was called
+2023-06-10 00:33:28.456 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:33:28.461 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+2023-06-10 00:33:28.470 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Person, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:33:28.474 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 22.0428ms
+2023-06-10 00:33:28.476 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:33:28.476 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons - - - 200 - application/json;+charset=utf-8 29.6335ms
+2023-06-10 00:33:34.100 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons - -
+2023-06-10 00:33:34.102 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:33:34.103 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:33:34.104 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Person]]] Get() on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-10 00:33:34.106 +02:00 [INF] People endpoint was called
+2023-06-10 00:33:34.107 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:33:34.109 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+2023-06-10 00:33:34.112 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Person, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:33:34.113 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 6.6791ms
+2023-06-10 00:33:34.114 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:33:34.115 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons - - - 200 - application/json;+charset=utf-8 14.7771ms
+2023-06-10 00:33:34.771 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:33:34.772 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:33:34.774 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:33:34.775 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:33:34.777 +02:00 [INF] Book endpoint was called
+2023-06-10 00:33:34.777 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:33:34.779 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:33:34.782 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:33:34.783 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 6.7323ms
+2023-06-10 00:33:34.784 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:33:34.786 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 14.6150ms
+2023-06-10 00:33:52.328 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7032/Borrows - -
+2023-06-10 00:33:52.329 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:33:52.330 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7032/Borrows - - - 204 - - 1.5144ms
+2023-06-10 00:33:52.331 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7032/Borrows application/json;+charset=utf-8 115
+2023-06-10 00:33:52.332 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:33:52.332 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BorrowsController.Post (LibraryApplication.Api)'
+2023-06-10 00:33:52.333 +02:00 [INF] Route matched with {action = "Post", controller = "Borrows"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(LibraryApplication.Contract.Borrow) on controller LibraryApplication.Api.Controllers.BorrowsController (LibraryApplication.Api).
+2023-06-10 00:33:52.335 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:33:52.338 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__borrow_InventoryNumber_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Borrows] AS [b]
+        WHERE [b].[InventoryNumber] = @__borrow_InventoryNumber_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-06-10 00:33:52.341 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Borrows] ([BorrowDate], [InventoryNumber], [ReaderNumber], [ReturnDate])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Borrows]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-06-10 00:33:52.343 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-06-10 00:33:52.344 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BorrowsController.Post (LibraryApplication.Api) in 9.551ms
+2023-06-10 00:33:52.345 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BorrowsController.Post (LibraryApplication.Api)'
+2023-06-10 00:33:52.346 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7032/Borrows application/json;+charset=utf-8 115 - 200 0 - 14.7116ms
+2023-06-10 00:33:52.350 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:33:52.351 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:33:52.352 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:33:52.353 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:33:52.354 +02:00 [INF] Book endpoint was called
+2023-06-10 00:33:52.356 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:33:52.358 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:33:52.360 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:33:52.361 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 7.0244ms
+2023-06-10 00:33:52.362 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:33:52.363 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 13.0508ms
+2023-06-10 00:33:54.816 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books/GetById/5 - -
+2023-06-10 00:33:54.817 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:33:54.819 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:33:54.820 +02:00 [INF] Route matched with {action = "GetById", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetById(Int32) on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:33:54.822 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:33:54.825 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Title], CASE
+    WHEN [b1].[Id] IS NULL THEN N'In'
+    ELSE N'Borrowed'
+END AS [Status], CASE
+    WHEN [p].[ReaderNumber] IS NULL THEN N''
+    ELSE [p].[Name]
+END AS [Borrower], CASE
+    WHEN [b1].[Id] IS NULL THEN N''
+    ELSE CONVERT(varchar(100), [b1].[ReturnDate])
+END AS [DueDate]
+FROM [Books] AS [b]
+INNER JOIN [Books] AS [b0] ON [b].[InventoryNumber] = [b0].[InventoryNumber]
+LEFT JOIN [Borrows] AS [b1] ON [b0].[InventoryNumber] = [b1].[InventoryNumber]
+LEFT JOIN [Persons] AS [p] ON [b1].[ReaderNumber] = [p].[ReaderNumber]
+WHERE [b].[InventoryNumber] = @__id_0
+2023-06-10 00:33:54.827 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`4[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-10 00:33:54.828 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api) in 7.4421ms
+2023-06-10 00:33:54.830 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:33:54.831 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books/GetById/5 - - - 200 - application/json;+charset=utf-8 14.4899ms
+2023-06-10 00:34:11.156 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:34:11.157 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:34:11.159 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:34:11.160 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:34:11.162 +02:00 [INF] Book endpoint was called
+2023-06-10 00:34:11.163 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:34:11.166 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:34:11.169 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:34:11.170 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 7.8433ms
+2023-06-10 00:34:11.171 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:34:11.172 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 16.4735ms
+2023-06-10 00:34:13.444 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books/GetById/6 - -
+2023-06-10 00:34:13.446 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:34:13.447 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:34:13.448 +02:00 [INF] Route matched with {action = "GetById", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetById(Int32) on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:34:13.451 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:34:13.454 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Title], CASE
+    WHEN [b1].[Id] IS NULL THEN N'In'
+    ELSE N'Borrowed'
+END AS [Status], CASE
+    WHEN [p].[ReaderNumber] IS NULL THEN N''
+    ELSE [p].[Name]
+END AS [Borrower], CASE
+    WHEN [b1].[Id] IS NULL THEN N''
+    ELSE CONVERT(varchar(100), [b1].[ReturnDate])
+END AS [DueDate]
+FROM [Books] AS [b]
+INNER JOIN [Books] AS [b0] ON [b].[InventoryNumber] = [b0].[InventoryNumber]
+LEFT JOIN [Borrows] AS [b1] ON [b0].[InventoryNumber] = [b1].[InventoryNumber]
+LEFT JOIN [Persons] AS [p] ON [b1].[ReaderNumber] = [p].[ReaderNumber]
+WHERE [b].[InventoryNumber] = @__id_0
+2023-06-10 00:34:13.458 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`4[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-10 00:34:13.460 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api) in 9.078ms
+2023-06-10 00:34:13.461 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:34:13.461 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books/GetById/6 - - - 200 - application/json;+charset=utf-8 18.2273ms
+2023-06-10 00:34:14.432 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:34:14.434 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:34:14.435 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:34:14.436 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:34:14.438 +02:00 [INF] Book endpoint was called
+2023-06-10 00:34:14.441 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:34:14.444 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:34:14.446 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:34:14.447 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 8.6924ms
+2023-06-10 00:34:14.448 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:34:14.449 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 16.7676ms
+2023-06-10 00:34:15.441 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books/GetById/5 - -
+2023-06-10 00:34:15.442 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:34:15.443 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:34:15.444 +02:00 [INF] Route matched with {action = "GetById", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetById(Int32) on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:34:15.446 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:34:15.448 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Title], CASE
+    WHEN [b1].[Id] IS NULL THEN N'In'
+    ELSE N'Borrowed'
+END AS [Status], CASE
+    WHEN [p].[ReaderNumber] IS NULL THEN N''
+    ELSE [p].[Name]
+END AS [Borrower], CASE
+    WHEN [b1].[Id] IS NULL THEN N''
+    ELSE CONVERT(varchar(100), [b1].[ReturnDate])
+END AS [DueDate]
+FROM [Books] AS [b]
+INNER JOIN [Books] AS [b0] ON [b].[InventoryNumber] = [b0].[InventoryNumber]
+LEFT JOIN [Borrows] AS [b1] ON [b0].[InventoryNumber] = [b1].[InventoryNumber]
+LEFT JOIN [Persons] AS [p] ON [b1].[ReaderNumber] = [p].[ReaderNumber]
+WHERE [b].[InventoryNumber] = @__id_0
+2023-06-10 00:34:15.451 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`4[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-10 00:34:15.452 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api) in 6.5711ms
+2023-06-10 00:34:15.453 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:34:15.454 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books/GetById/5 - - - 200 - application/json;+charset=utf-8 13.8167ms
+2023-06-10 00:34:16.680 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:34:16.681 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:34:16.682 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:34:16.683 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:34:16.685 +02:00 [INF] Book endpoint was called
+2023-06-10 00:34:16.686 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:34:16.688 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:34:16.691 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:34:16.692 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 7.5702ms
+2023-06-10 00:34:16.695 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:34:16.696 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 15.6948ms
+2023-06-10 00:34:17.831 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books/GetById/6 - -
+2023-06-10 00:34:17.832 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:34:17.833 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:34:17.834 +02:00 [INF] Route matched with {action = "GetById", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetById(Int32) on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:34:17.836 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:34:17.839 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Title], CASE
+    WHEN [b1].[Id] IS NULL THEN N'In'
+    ELSE N'Borrowed'
+END AS [Status], CASE
+    WHEN [p].[ReaderNumber] IS NULL THEN N''
+    ELSE [p].[Name]
+END AS [Borrower], CASE
+    WHEN [b1].[Id] IS NULL THEN N''
+    ELSE CONVERT(varchar(100), [b1].[ReturnDate])
+END AS [DueDate]
+FROM [Books] AS [b]
+INNER JOIN [Books] AS [b0] ON [b].[InventoryNumber] = [b0].[InventoryNumber]
+LEFT JOIN [Borrows] AS [b1] ON [b0].[InventoryNumber] = [b1].[InventoryNumber]
+LEFT JOIN [Persons] AS [p] ON [b1].[ReaderNumber] = [p].[ReaderNumber]
+WHERE [b].[InventoryNumber] = @__id_0
+2023-06-10 00:34:17.842 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`4[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-10 00:34:17.843 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api) in 7.4791ms
+2023-06-10 00:34:17.844 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:34:17.845 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books/GetById/6 - - - 200 - application/json;+charset=utf-8 13.6321ms
+2023-06-10 00:34:18.904 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:34:18.905 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:34:18.907 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:34:18.909 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:34:18.910 +02:00 [INF] Book endpoint was called
+2023-06-10 00:34:18.911 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:34:18.913 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:34:18.915 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:34:18.916 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 6.5685ms
+2023-06-10 00:34:18.918 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:34:18.919 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 15.4023ms
+2023-06-10 00:34:22.777 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books/GetById/5 - -
+2023-06-10 00:34:22.779 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:34:22.780 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:34:22.780 +02:00 [INF] Route matched with {action = "GetById", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetById(Int32) on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:34:22.782 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:34:22.785 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Title], CASE
+    WHEN [b1].[Id] IS NULL THEN N'In'
+    ELSE N'Borrowed'
+END AS [Status], CASE
+    WHEN [p].[ReaderNumber] IS NULL THEN N''
+    ELSE [p].[Name]
+END AS [Borrower], CASE
+    WHEN [b1].[Id] IS NULL THEN N''
+    ELSE CONVERT(varchar(100), [b1].[ReturnDate])
+END AS [DueDate]
+FROM [Books] AS [b]
+INNER JOIN [Books] AS [b0] ON [b].[InventoryNumber] = [b0].[InventoryNumber]
+LEFT JOIN [Borrows] AS [b1] ON [b0].[InventoryNumber] = [b1].[InventoryNumber]
+LEFT JOIN [Persons] AS [p] ON [b1].[ReaderNumber] = [p].[ReaderNumber]
+WHERE [b].[InventoryNumber] = @__id_0
+2023-06-10 00:34:22.787 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`4[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-10 00:34:22.789 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api) in 7.5728ms
+2023-06-10 00:34:22.791 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:34:22.792 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books/GetById/5 - - - 200 - application/json;+charset=utf-8 14.8407ms
+2023-06-10 00:34:23.793 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:34:23.794 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:34:23.795 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:34:23.796 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:34:23.798 +02:00 [INF] Book endpoint was called
+2023-06-10 00:34:23.798 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:34:23.800 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:34:23.803 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:34:23.804 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 6.2643ms
+2023-06-10 00:34:23.805 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:34:23.806 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 13.8669ms
+2023-06-10 00:34:37.721 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7032/Borrows - -
+2023-06-10 00:34:37.722 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:34:37.724 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7032/Borrows - - - 204 - - 2.5811ms
+2023-06-10 00:34:37.725 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7032/Borrows application/json;+charset=utf-8 115
+2023-06-10 00:34:37.725 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:34:37.726 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BorrowsController.Post (LibraryApplication.Api)'
+2023-06-10 00:34:37.726 +02:00 [INF] Route matched with {action = "Post", controller = "Borrows"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(LibraryApplication.Contract.Borrow) on controller LibraryApplication.Api.Controllers.BorrowsController (LibraryApplication.Api).
+2023-06-10 00:34:37.728 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:34:37.731 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__borrow_InventoryNumber_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Borrows] AS [b]
+        WHERE [b].[InventoryNumber] = @__borrow_InventoryNumber_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-06-10 00:34:37.734 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-06-10 00:34:37.735 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BorrowsController.Post (LibraryApplication.Api) in 7.3036ms
+2023-06-10 00:34:37.736 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BorrowsController.Post (LibraryApplication.Api)'
+2023-06-10 00:34:37.737 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7032/Borrows application/json;+charset=utf-8 115 - 400 - text/plain;+charset=utf-8 12.1671ms
+2023-06-10 00:34:37.740 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:34:37.742 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:34:37.742 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:34:37.743 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:34:37.745 +02:00 [INF] Book endpoint was called
+2023-06-10 00:34:37.746 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:34:37.748 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:34:37.750 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:34:37.751 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 6.7674ms
+2023-06-10 00:34:37.752 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:34:37.753 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 12.7178ms
+2023-06-10 00:34:44.400 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books/GetById/5 - -
+2023-06-10 00:34:44.401 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:34:44.402 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:34:44.403 +02:00 [INF] Route matched with {action = "GetById", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetById(Int32) on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:34:44.405 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:34:44.408 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Title], CASE
+    WHEN [b1].[Id] IS NULL THEN N'In'
+    ELSE N'Borrowed'
+END AS [Status], CASE
+    WHEN [p].[ReaderNumber] IS NULL THEN N''
+    ELSE [p].[Name]
+END AS [Borrower], CASE
+    WHEN [b1].[Id] IS NULL THEN N''
+    ELSE CONVERT(varchar(100), [b1].[ReturnDate])
+END AS [DueDate]
+FROM [Books] AS [b]
+INNER JOIN [Books] AS [b0] ON [b].[InventoryNumber] = [b0].[InventoryNumber]
+LEFT JOIN [Borrows] AS [b1] ON [b0].[InventoryNumber] = [b1].[InventoryNumber]
+LEFT JOIN [Persons] AS [p] ON [b1].[ReaderNumber] = [p].[ReaderNumber]
+WHERE [b].[InventoryNumber] = @__id_0
+2023-06-10 00:34:44.411 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`4[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-10 00:34:44.412 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api) in 7.8774ms
+2023-06-10 00:34:44.414 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:34:44.414 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books/GetById/5 - - - 200 - application/json;+charset=utf-8 14.3489ms
+2023-06-10 00:35:10.989 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:35:10.991 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:35:10.992 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:35:10.993 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:35:10.994 +02:00 [INF] Book endpoint was called
+2023-06-10 00:35:10.995 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:35:10.997 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:35:11.000 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:35:11.001 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 7.0227ms
+2023-06-10 00:35:11.002 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:35:11.003 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 14.6352ms
+2023-06-10 00:35:11.961 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books/GetById/4 - -
+2023-06-10 00:35:11.962 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:35:11.963 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:35:11.963 +02:00 [INF] Route matched with {action = "GetById", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetById(Int32) on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:35:11.965 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:35:11.967 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Title], CASE
+    WHEN [b1].[Id] IS NULL THEN N'In'
+    ELSE N'Borrowed'
+END AS [Status], CASE
+    WHEN [p].[ReaderNumber] IS NULL THEN N''
+    ELSE [p].[Name]
+END AS [Borrower], CASE
+    WHEN [b1].[Id] IS NULL THEN N''
+    ELSE CONVERT(varchar(100), [b1].[ReturnDate])
+END AS [DueDate]
+FROM [Books] AS [b]
+INNER JOIN [Books] AS [b0] ON [b].[InventoryNumber] = [b0].[InventoryNumber]
+LEFT JOIN [Borrows] AS [b1] ON [b0].[InventoryNumber] = [b1].[InventoryNumber]
+LEFT JOIN [Persons] AS [p] ON [b1].[ReaderNumber] = [p].[ReaderNumber]
+WHERE [b].[InventoryNumber] = @__id_0
+2023-06-10 00:35:11.970 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`4[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-10 00:35:11.971 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api) in 6.7458ms
+2023-06-10 00:35:11.973 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:35:11.974 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books/GetById/4 - - - 200 - application/json;+charset=utf-8 13.3673ms
+2023-06-10 00:35:13.152 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:35:13.153 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:35:13.155 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:35:13.157 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:35:13.158 +02:00 [INF] Book endpoint was called
+2023-06-10 00:35:13.159 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:35:13.161 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:35:13.163 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:35:13.164 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 5.9993ms
+2023-06-10 00:35:13.165 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:35:13.166 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 13.6782ms
+2023-06-10 00:35:13.968 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books/GetById/5 - -
+2023-06-10 00:35:13.969 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:35:13.970 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:35:13.972 +02:00 [INF] Route matched with {action = "GetById", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetById(Int32) on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:35:13.975 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:35:13.977 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Title], CASE
+    WHEN [b1].[Id] IS NULL THEN N'In'
+    ELSE N'Borrowed'
+END AS [Status], CASE
+    WHEN [p].[ReaderNumber] IS NULL THEN N''
+    ELSE [p].[Name]
+END AS [Borrower], CASE
+    WHEN [b1].[Id] IS NULL THEN N''
+    ELSE CONVERT(varchar(100), [b1].[ReturnDate])
+END AS [DueDate]
+FROM [Books] AS [b]
+INNER JOIN [Books] AS [b0] ON [b].[InventoryNumber] = [b0].[InventoryNumber]
+LEFT JOIN [Borrows] AS [b1] ON [b0].[InventoryNumber] = [b1].[InventoryNumber]
+LEFT JOIN [Persons] AS [p] ON [b1].[ReaderNumber] = [p].[ReaderNumber]
+WHERE [b].[InventoryNumber] = @__id_0
+2023-06-10 00:35:13.980 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`4[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-10 00:35:13.981 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api) in 6.6373ms
+2023-06-10 00:35:13.982 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:35:13.983 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books/GetById/5 - - - 200 - application/json;+charset=utf-8 15.2906ms
+2023-06-10 00:35:21.506 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:35:21.512 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:35:21.513 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:35:21.513 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:35:21.515 +02:00 [INF] Book endpoint was called
+2023-06-10 00:35:21.515 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:35:21.518 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:35:21.520 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:35:21.521 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 6.5294ms
+2023-06-10 00:35:21.523 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:35:21.523 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 17.6704ms
+2023-06-10 00:36:07.750 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7032/Books - -
+2023-06-10 00:36:07.760 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:36:07.761 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7032/Books - - - 204 - - 12.7216ms
+2023-06-10 00:36:07.762 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7032/Books application/json;+charset=utf-8 157
+2023-06-10 00:36:07.763 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:36:07.763 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Post (LibraryApplication.Api)'
+2023-06-10 00:36:07.766 +02:00 [INF] Route matched with {action = "Post", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(LibraryApplication.Contract.Book) on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:36:07.770 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:36:07.778 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Books] ([Author], [EditionYear], [Publisher], [Title])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [InventoryNumber]
+FROM [Books]
+WHERE @@ROWCOUNT = 1 AND [InventoryNumber] = scope_identity();
+2023-06-10 00:36:07.781 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-06-10 00:36:07.782 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Post (LibraryApplication.Api) in 14.4897ms
+2023-06-10 00:36:07.783 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Post (LibraryApplication.Api)'
+2023-06-10 00:36:07.784 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7032/Books application/json;+charset=utf-8 157 - 200 0 - 21.6445ms
+2023-06-10 00:36:07.789 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:36:07.790 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:36:07.791 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:36:07.792 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:36:07.793 +02:00 [INF] Book endpoint was called
+2023-06-10 00:36:07.795 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:36:07.797 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:36:07.799 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:36:07.800 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 6.8561ms
+2023-06-10 00:36:07.801 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:36:07.802 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 12.9784ms
+2023-06-10 00:36:10.096 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books/GetById/8 - -
+2023-06-10 00:36:10.097 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:36:10.098 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:36:10.099 +02:00 [INF] Route matched with {action = "GetById", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetById(Int32) on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:36:10.101 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:36:10.104 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Title], CASE
+    WHEN [b1].[Id] IS NULL THEN N'In'
+    ELSE N'Borrowed'
+END AS [Status], CASE
+    WHEN [p].[ReaderNumber] IS NULL THEN N''
+    ELSE [p].[Name]
+END AS [Borrower], CASE
+    WHEN [b1].[Id] IS NULL THEN N''
+    ELSE CONVERT(varchar(100), [b1].[ReturnDate])
+END AS [DueDate]
+FROM [Books] AS [b]
+INNER JOIN [Books] AS [b0] ON [b].[InventoryNumber] = [b0].[InventoryNumber]
+LEFT JOIN [Borrows] AS [b1] ON [b0].[InventoryNumber] = [b1].[InventoryNumber]
+LEFT JOIN [Persons] AS [p] ON [b1].[ReaderNumber] = [p].[ReaderNumber]
+WHERE [b].[InventoryNumber] = @__id_0
+2023-06-10 00:36:10.108 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`4[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-10 00:36:10.109 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api) in 8.706ms
+2023-06-10 00:36:10.110 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:36:10.111 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books/GetById/8 - - - 200 - application/json;+charset=utf-8 15.3760ms
+2023-06-10 00:36:14.901 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:36:14.903 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:36:14.904 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:36:14.905 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:36:14.908 +02:00 [INF] Book endpoint was called
+2023-06-10 00:36:14.909 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:36:14.912 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:36:14.914 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:36:14.915 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 7.2882ms
+2023-06-10 00:36:14.916 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:36:14.917 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 16.1878ms
+2023-06-10 00:36:22.853 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:36:22.859 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:36:22.859 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:36:22.860 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:36:22.862 +02:00 [INF] Book endpoint was called
+2023-06-10 00:36:22.863 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:36:22.866 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:36:22.869 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:36:22.870 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 8.5216ms
+2023-06-10 00:36:22.872 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:36:22.874 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 20.2589ms
+2023-06-10 00:36:45.954 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7032/Borrows - -
+2023-06-10 00:36:45.959 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:36:45.959 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7032/Borrows - - - 204 - - 5.5662ms
+2023-06-10 00:36:45.960 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7032/Borrows application/json;+charset=utf-8 115
+2023-06-10 00:36:45.961 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:36:45.962 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BorrowsController.Post (LibraryApplication.Api)'
+2023-06-10 00:36:45.962 +02:00 [INF] Route matched with {action = "Post", controller = "Borrows"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(LibraryApplication.Contract.Borrow) on controller LibraryApplication.Api.Controllers.BorrowsController (LibraryApplication.Api).
+2023-06-10 00:36:45.964 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:36:45.967 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__borrow_InventoryNumber_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Borrows] AS [b]
+        WHERE [b].[InventoryNumber] = @__borrow_InventoryNumber_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-06-10 00:36:45.971 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Borrows] ([BorrowDate], [InventoryNumber], [ReaderNumber], [ReturnDate])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Borrows]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-06-10 00:36:45.976 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-06-10 00:36:45.977 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BorrowsController.Post (LibraryApplication.Api) in 13.302ms
+2023-06-10 00:36:45.978 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BorrowsController.Post (LibraryApplication.Api)'
+2023-06-10 00:36:45.979 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7032/Borrows application/json;+charset=utf-8 115 - 200 0 - 18.3823ms
+2023-06-10 00:36:45.983 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:36:45.984 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:36:45.985 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:36:45.986 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:36:45.987 +02:00 [INF] Book endpoint was called
+2023-06-10 00:36:45.988 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:36:45.991 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:36:45.993 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:36:45.994 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 6.9671ms
+2023-06-10 00:36:45.995 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:36:45.996 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 13.1955ms
+2023-06-10 00:36:48.184 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books/GetById/8 - -
+2023-06-10 00:36:48.185 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:36:48.186 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:36:48.187 +02:00 [INF] Route matched with {action = "GetById", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetById(Int32) on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:36:48.189 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:36:48.192 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Title], CASE
+    WHEN [b1].[Id] IS NULL THEN N'In'
+    ELSE N'Borrowed'
+END AS [Status], CASE
+    WHEN [p].[ReaderNumber] IS NULL THEN N''
+    ELSE [p].[Name]
+END AS [Borrower], CASE
+    WHEN [b1].[Id] IS NULL THEN N''
+    ELSE CONVERT(varchar(100), [b1].[ReturnDate])
+END AS [DueDate]
+FROM [Books] AS [b]
+INNER JOIN [Books] AS [b0] ON [b].[InventoryNumber] = [b0].[InventoryNumber]
+LEFT JOIN [Borrows] AS [b1] ON [b0].[InventoryNumber] = [b1].[InventoryNumber]
+LEFT JOIN [Persons] AS [p] ON [b1].[ReaderNumber] = [p].[ReaderNumber]
+WHERE [b].[InventoryNumber] = @__id_0
+2023-06-10 00:36:48.194 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`4[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-10 00:36:48.196 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api) in 7.6126ms
+2023-06-10 00:36:48.197 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:36:48.197 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books/GetById/8 - - - 200 - application/json;+charset=utf-8 13.6007ms
+2023-06-10 00:37:10.721 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7032/Borrows - -
+2023-06-10 00:37:10.722 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:37:10.724 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7032/Borrows - - - 204 - - 2.9985ms
+2023-06-10 00:37:10.725 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7032/Borrows application/json;+charset=utf-8 115
+2023-06-10 00:37:10.726 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:37:10.727 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BorrowsController.Post (LibraryApplication.Api)'
+2023-06-10 00:37:10.727 +02:00 [INF] Route matched with {action = "Post", controller = "Borrows"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(LibraryApplication.Contract.Borrow) on controller LibraryApplication.Api.Controllers.BorrowsController (LibraryApplication.Api).
+2023-06-10 00:37:10.729 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:37:10.732 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__borrow_InventoryNumber_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Borrows] AS [b]
+        WHERE [b].[InventoryNumber] = @__borrow_InventoryNumber_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-06-10 00:37:10.736 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Borrows] ([BorrowDate], [InventoryNumber], [ReaderNumber], [ReturnDate])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Borrows]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-06-10 00:37:10.742 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-06-10 00:37:10.743 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BorrowsController.Post (LibraryApplication.Api) in 13.829ms
+2023-06-10 00:37:10.743 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BorrowsController.Post (LibraryApplication.Api)'
+2023-06-10 00:37:10.744 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7032/Borrows application/json;+charset=utf-8 115 - 200 0 - 19.3889ms
+2023-06-10 00:37:10.749 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:37:10.750 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:37:10.751 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:37:10.751 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:37:10.753 +02:00 [INF] Book endpoint was called
+2023-06-10 00:37:10.754 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:37:10.757 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:37:10.762 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:37:10.762 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 9.7729ms
+2023-06-10 00:37:10.764 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:37:10.765 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 16.2190ms
+2023-06-10 00:37:12.440 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books/GetById/8 - -
+2023-06-10 00:37:12.441 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:37:12.442 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:37:12.444 +02:00 [INF] Route matched with {action = "GetById", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetById(Int32) on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:37:12.446 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:37:12.448 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Title], CASE
+    WHEN [b1].[Id] IS NULL THEN N'In'
+    ELSE N'Borrowed'
+END AS [Status], CASE
+    WHEN [p].[ReaderNumber] IS NULL THEN N''
+    ELSE [p].[Name]
+END AS [Borrower], CASE
+    WHEN [b1].[Id] IS NULL THEN N''
+    ELSE CONVERT(varchar(100), [b1].[ReturnDate])
+END AS [DueDate]
+FROM [Books] AS [b]
+INNER JOIN [Books] AS [b0] ON [b].[InventoryNumber] = [b0].[InventoryNumber]
+LEFT JOIN [Borrows] AS [b1] ON [b0].[InventoryNumber] = [b1].[InventoryNumber]
+LEFT JOIN [Persons] AS [p] ON [b1].[ReaderNumber] = [p].[ReaderNumber]
+WHERE [b].[InventoryNumber] = @__id_0
+2023-06-10 00:37:12.451 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`4[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-10 00:37:12.452 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api) in 6.6125ms
+2023-06-10 00:37:12.453 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:37:12.454 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books/GetById/8 - - - 200 - application/json;+charset=utf-8 14.0990ms
+2023-06-10 00:37:15.873 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:37:15.874 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:37:15.876 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:37:15.877 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:37:15.879 +02:00 [INF] Book endpoint was called
+2023-06-10 00:37:15.880 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:37:15.882 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:37:15.884 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:37:15.885 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 6.0908ms
+2023-06-10 00:37:15.886 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:37:15.887 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 14.1497ms
+2023-06-10 00:37:30.369 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7032/Books - -
+2023-06-10 00:37:30.370 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:37:30.370 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7032/Books - - - 204 - - 1.5487ms
+2023-06-10 00:37:30.371 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7032/Books application/json;+charset=utf-8 138
+2023-06-10 00:37:30.373 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:37:30.373 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Post (LibraryApplication.Api)'
+2023-06-10 00:37:30.374 +02:00 [INF] Route matched with {action = "Post", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(LibraryApplication.Contract.Book) on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:37:30.376 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:37:30.379 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Books] ([Author], [EditionYear], [Publisher], [Title])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [InventoryNumber]
+FROM [Books]
+WHERE @@ROWCOUNT = 1 AND [InventoryNumber] = scope_identity();
+2023-06-10 00:37:30.385 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-06-10 00:37:30.386 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Post (LibraryApplication.Api) in 10.256ms
+2023-06-10 00:37:30.387 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Post (LibraryApplication.Api)'
+2023-06-10 00:37:30.387 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7032/Books application/json;+charset=utf-8 138 - 200 0 - 16.1290ms
+2023-06-10 00:37:30.392 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:37:30.393 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:37:30.394 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:37:30.395 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:37:30.397 +02:00 [INF] Book endpoint was called
+2023-06-10 00:37:30.398 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:37:30.400 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:37:30.402 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:37:30.403 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 6.2133ms
+2023-06-10 00:37:30.404 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:37:30.405 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 12.7251ms
+2023-06-10 00:37:37.419 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:37:37.420 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:37:37.422 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:37:37.424 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:37:37.425 +02:00 [INF] Book endpoint was called
+2023-06-10 00:37:37.426 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:37:37.428 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:37:37.431 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:37:37.432 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 6.4186ms
+2023-06-10 00:37:37.433 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:37:37.434 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 14.4521ms
+2023-06-10 00:37:38.108 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons - -
+2023-06-10 00:37:38.110 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:37:38.111 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:37:38.113 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Person]]] Get() on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-10 00:37:38.114 +02:00 [INF] People endpoint was called
+2023-06-10 00:37:38.115 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:37:38.117 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+2023-06-10 00:37:38.120 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Person, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:37:38.121 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 6.5257ms
+2023-06-10 00:37:38.122 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:37:38.123 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons - - - 200 - application/json;+charset=utf-8 15.2117ms
+2023-06-10 00:37:56.720 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7032/Borrows - -
+2023-06-10 00:37:56.721 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:37:56.721 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7032/Borrows - - - 204 - - 1.4124ms
+2023-06-10 00:37:56.723 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7032/Borrows application/json;+charset=utf-8 115
+2023-06-10 00:37:56.723 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:37:56.724 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BorrowsController.Post (LibraryApplication.Api)'
+2023-06-10 00:37:56.724 +02:00 [INF] Route matched with {action = "Post", controller = "Borrows"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(LibraryApplication.Contract.Borrow) on controller LibraryApplication.Api.Controllers.BorrowsController (LibraryApplication.Api).
+2023-06-10 00:37:56.726 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:37:56.729 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__borrow_InventoryNumber_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Borrows] AS [b]
+        WHERE [b].[InventoryNumber] = @__borrow_InventoryNumber_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-06-10 00:37:56.731 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-06-10 00:37:56.732 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BorrowsController.Post (LibraryApplication.Api) in 6.5643ms
+2023-06-10 00:37:56.733 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BorrowsController.Post (LibraryApplication.Api)'
+2023-06-10 00:37:56.734 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7032/Borrows application/json;+charset=utf-8 115 - 400 - text/plain;+charset=utf-8 11.9250ms
+2023-06-10 00:37:56.738 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:37:56.740 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:37:56.741 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:37:56.742 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:37:56.743 +02:00 [INF] Book endpoint was called
+2023-06-10 00:37:56.744 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:37:56.746 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:37:56.749 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:37:56.750 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 6.5193ms
+2023-06-10 00:37:56.751 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:37:56.751 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 13.5283ms
+2023-06-10 00:37:57.977 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books/GetById/9 - -
+2023-06-10 00:37:57.978 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:37:57.980 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:37:57.981 +02:00 [INF] Route matched with {action = "GetById", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetById(Int32) on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:37:57.984 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:37:57.987 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Title], CASE
+    WHEN [b1].[Id] IS NULL THEN N'In'
+    ELSE N'Borrowed'
+END AS [Status], CASE
+    WHEN [p].[ReaderNumber] IS NULL THEN N''
+    ELSE [p].[Name]
+END AS [Borrower], CASE
+    WHEN [b1].[Id] IS NULL THEN N''
+    ELSE CONVERT(varchar(100), [b1].[ReturnDate])
+END AS [DueDate]
+FROM [Books] AS [b]
+INNER JOIN [Books] AS [b0] ON [b].[InventoryNumber] = [b0].[InventoryNumber]
+LEFT JOIN [Borrows] AS [b1] ON [b0].[InventoryNumber] = [b1].[InventoryNumber]
+LEFT JOIN [Persons] AS [p] ON [b1].[ReaderNumber] = [p].[ReaderNumber]
+WHERE [b].[InventoryNumber] = @__id_0
+2023-06-10 00:37:57.991 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`4[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-10 00:37:57.992 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api) in 9.1306ms
+2023-06-10 00:37:57.993 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:37:57.994 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books/GetById/9 - - - 200 - application/json;+charset=utf-8 17.4924ms
+2023-06-10 00:38:01.904 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:38:01.905 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:38:01.908 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:38:01.908 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:38:01.910 +02:00 [INF] Book endpoint was called
+2023-06-10 00:38:01.910 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:38:01.912 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:38:01.915 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:38:01.916 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 6.0688ms
+2023-06-10 00:38:01.917 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:38:01.918 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 13.6892ms
+2023-06-10 00:38:07.208 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books/GetById/9 - -
+2023-06-10 00:38:07.210 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:38:07.211 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:38:07.212 +02:00 [INF] Route matched with {action = "GetById", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetById(Int32) on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:38:07.214 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:38:07.217 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Title], CASE
+    WHEN [b1].[Id] IS NULL THEN N'In'
+    ELSE N'Borrowed'
+END AS [Status], CASE
+    WHEN [p].[ReaderNumber] IS NULL THEN N''
+    ELSE [p].[Name]
+END AS [Borrower], CASE
+    WHEN [b1].[Id] IS NULL THEN N''
+    ELSE CONVERT(varchar(100), [b1].[ReturnDate])
+END AS [DueDate]
+FROM [Books] AS [b]
+INNER JOIN [Books] AS [b0] ON [b].[InventoryNumber] = [b0].[InventoryNumber]
+LEFT JOIN [Borrows] AS [b1] ON [b0].[InventoryNumber] = [b1].[InventoryNumber]
+LEFT JOIN [Persons] AS [p] ON [b1].[ReaderNumber] = [p].[ReaderNumber]
+WHERE [b].[InventoryNumber] = @__id_0
+2023-06-10 00:38:07.219 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`4[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-10 00:38:07.221 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api) in 6.6695ms
+2023-06-10 00:38:07.223 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:38:07.224 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books/GetById/9 - - - 200 - application/json;+charset=utf-8 15.6153ms
+2023-06-10 00:38:09.304 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:38:09.306 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:38:09.307 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:38:09.308 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:38:09.310 +02:00 [INF] Book endpoint was called
+2023-06-10 00:38:09.310 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:38:09.312 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:38:09.315 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:38:09.317 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 7.4099ms
+2023-06-10 00:38:09.318 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:38:09.320 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 15.4439ms
+2023-06-10 00:38:16.426 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7032/Books - -
+2023-06-10 00:38:16.427 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:38:16.428 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7032/Books - - - 204 - - 2.0538ms
+2023-06-10 00:38:16.429 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7032/Books application/json;+charset=utf-8 135
+2023-06-10 00:38:16.430 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:38:16.430 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Post (LibraryApplication.Api)'
+2023-06-10 00:38:16.431 +02:00 [INF] Route matched with {action = "Post", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(LibraryApplication.Contract.Book) on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:38:16.433 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:38:16.436 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Books] ([Author], [EditionYear], [Publisher], [Title])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [InventoryNumber]
+FROM [Books]
+WHERE @@ROWCOUNT = 1 AND [InventoryNumber] = scope_identity();
+2023-06-10 00:38:16.439 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-06-10 00:38:16.441 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Post (LibraryApplication.Api) in 8.1434ms
+2023-06-10 00:38:16.441 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Post (LibraryApplication.Api)'
+2023-06-10 00:38:16.442 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7032/Books application/json;+charset=utf-8 135 - 200 0 - 13.2287ms
+2023-06-10 00:38:16.446 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:38:16.447 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:38:16.448 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:38:16.449 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:38:16.451 +02:00 [INF] Book endpoint was called
+2023-06-10 00:38:16.451 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:38:16.453 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:38:16.456 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:38:16.458 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 7.2509ms
+2023-06-10 00:38:16.459 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:38:16.460 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 13.5248ms
+2023-06-10 00:38:20.262 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons - -
+2023-06-10 00:38:20.269 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:38:20.269 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:38:20.270 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Person]]] Get() on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-10 00:38:20.272 +02:00 [INF] People endpoint was called
+2023-06-10 00:38:20.273 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:38:20.275 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+2023-06-10 00:38:20.278 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Person, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:38:20.279 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 6.9569ms
+2023-06-10 00:38:20.280 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:38:20.280 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons - - - 200 - application/json;+charset=utf-8 19.5200ms
+2023-06-10 00:38:27.769 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7032/Borrows - -
+2023-06-10 00:38:27.770 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:38:27.772 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7032/Borrows - - - 204 - - 2.2413ms
+2023-06-10 00:38:27.773 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7032/Borrows application/json;+charset=utf-8 116
+2023-06-10 00:38:27.774 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:38:27.775 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BorrowsController.Post (LibraryApplication.Api)'
+2023-06-10 00:38:27.776 +02:00 [INF] Route matched with {action = "Post", controller = "Borrows"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(LibraryApplication.Contract.Borrow) on controller LibraryApplication.Api.Controllers.BorrowsController (LibraryApplication.Api).
+2023-06-10 00:38:27.779 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:38:27.782 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__borrow_InventoryNumber_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Borrows] AS [b]
+        WHERE [b].[InventoryNumber] = @__borrow_InventoryNumber_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-06-10 00:38:27.786 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Borrows] ([BorrowDate], [InventoryNumber], [ReaderNumber], [ReturnDate])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Borrows]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-06-10 00:38:27.791 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-06-10 00:38:27.792 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BorrowsController.Post (LibraryApplication.Api) in 14.1448ms
+2023-06-10 00:38:27.793 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BorrowsController.Post (LibraryApplication.Api)'
+2023-06-10 00:38:27.794 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7032/Borrows application/json;+charset=utf-8 116 - 200 0 - 20.6649ms
+2023-06-10 00:38:27.798 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:38:27.799 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:38:27.800 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:38:27.801 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:38:27.803 +02:00 [INF] Book endpoint was called
+2023-06-10 00:38:27.803 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:38:27.806 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:38:27.808 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:38:27.809 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 6.8128ms
+2023-06-10 00:38:27.810 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:38:27.811 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 12.9473ms
+2023-06-10 00:38:29.233 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books/GetById/10 - -
+2023-06-10 00:38:29.234 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:38:29.235 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:38:29.238 +02:00 [INF] Route matched with {action = "GetById", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetById(Int32) on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:38:29.242 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:38:29.245 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Title], CASE
+    WHEN [b1].[Id] IS NULL THEN N'In'
+    ELSE N'Borrowed'
+END AS [Status], CASE
+    WHEN [p].[ReaderNumber] IS NULL THEN N''
+    ELSE [p].[Name]
+END AS [Borrower], CASE
+    WHEN [b1].[Id] IS NULL THEN N''
+    ELSE CONVERT(varchar(100), [b1].[ReturnDate])
+END AS [DueDate]
+FROM [Books] AS [b]
+INNER JOIN [Books] AS [b0] ON [b].[InventoryNumber] = [b0].[InventoryNumber]
+LEFT JOIN [Borrows] AS [b1] ON [b0].[InventoryNumber] = [b1].[InventoryNumber]
+LEFT JOIN [Persons] AS [p] ON [b1].[ReaderNumber] = [p].[ReaderNumber]
+WHERE [b].[InventoryNumber] = @__id_0
+2023-06-10 00:38:29.250 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType5`4[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-10 00:38:29.251 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api) in 9.6457ms
+2023-06-10 00:38:29.252 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.GetById (LibraryApplication.Api)'
+2023-06-10 00:38:29.253 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books/GetById/10 - - - 200 - application/json;+charset=utf-8 20.3483ms
+2023-06-10 00:38:40.812 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Books - -
+2023-06-10 00:38:40.819 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:38:40.820 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:38:40.820 +02:00 [INF] Route matched with {action = "Get", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Book]]] Get() on controller LibraryApplication.Api.Controllers.BooksController (LibraryApplication.Api).
+2023-06-10 00:38:40.822 +02:00 [INF] Book endpoint was called
+2023-06-10 00:38:40.824 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:38:40.826 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[InventoryNumber], [b].[Author], [b].[EditionYear], [b].[Publisher], [b].[Title]
+FROM [Books] AS [b]
+2023-06-10 00:38:40.829 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Book, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:38:40.830 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api) in 8.2912ms
+2023-06-10 00:38:40.831 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BooksController.Get (LibraryApplication.Api)'
+2023-06-10 00:38:40.832 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Books - - - 200 - application/json;+charset=utf-8 20.2558ms
+2023-06-10 00:38:44.036 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons - -
+2023-06-10 00:38:44.038 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:38:44.039 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:38:44.041 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Person]]] Get() on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-10 00:38:44.042 +02:00 [INF] People endpoint was called
+2023-06-10 00:38:44.043 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:38:44.045 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+2023-06-10 00:38:44.048 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Person, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:38:44.049 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 6.7074ms
+2023-06-10 00:38:44.050 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:38:44.050 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons - - - 200 - application/json;+charset=utf-8 14.4017ms
+2023-06-10 00:38:45.715 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons/8 - -
+2023-06-10 00:38:45.716 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:38:45.717 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:38:45.719 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-10 00:38:45.725 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:38:45.737 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+WHERE [p].[ReaderNumber] = @__p_0
+2023-06-10 00:38:45.740 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-10 00:38:45.749 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b0].[Title], [b].[ReturnDate]
+FROM [Borrows] AS [b]
+INNER JOIN [Persons] AS [p] ON [b].[ReaderNumber] = [p].[ReaderNumber]
+INNER JOIN [Books] AS [b0] ON [b].[InventoryNumber] = [b0].[InventoryNumber]
+WHERE [p].[ReaderNumber] = @__id_0
+2023-06-10 00:38:45.756 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 34.6659ms
+2023-06-10 00:38:45.757 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:38:45.758 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons/8 - - - 200 - application/json;+charset=utf-8 42.6880ms
+2023-06-10 00:39:18.340 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons - -
+2023-06-10 00:39:18.344 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:39:18.345 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:39:18.345 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Person]]] Get() on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-10 00:39:18.347 +02:00 [INF] People endpoint was called
+2023-06-10 00:39:18.347 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:39:18.350 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+2023-06-10 00:39:18.352 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Person, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:39:18.353 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 6.5311ms
+2023-06-10 00:39:18.354 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:39:18.355 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons - - - 200 - application/json;+charset=utf-8 16.6447ms
+2023-06-10 00:39:23.065 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons/8 - -
+2023-06-10 00:39:23.066 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:39:23.067 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:39:23.068 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-10 00:39:23.070 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:39:23.073 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+WHERE [p].[ReaderNumber] = @__p_0
+2023-06-10 00:39:23.075 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-10 00:39:23.077 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b0].[Title], [b].[ReturnDate]
+FROM [Borrows] AS [b]
+INNER JOIN [Persons] AS [p] ON [b].[ReaderNumber] = [p].[ReaderNumber]
+INNER JOIN [Books] AS [b0] ON [b].[InventoryNumber] = [b0].[InventoryNumber]
+WHERE [p].[ReaderNumber] = @__id_0
+2023-06-10 00:39:23.079 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 9.336ms
+2023-06-10 00:39:23.080 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:39:23.081 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons/8 - - - 200 - application/json;+charset=utf-8 16.4773ms
+2023-06-10 00:39:27.013 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7032/Persons/8 - -
+2023-06-10 00:39:27.014 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:39:27.015 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7032/Persons/8 - - - 204 - - 1.4678ms
+2023-06-10 00:39:27.018 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7032/Persons/8 application/json;+charset=utf-8 96
+2023-06-10 00:39:27.018 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:39:27.019 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Put (LibraryApplication.Api)'
+2023-06-10 00:39:27.022 +02:00 [INF] Route matched with {action = "Put", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Put(Int32, LibraryApplication.Contract.Person) on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-10 00:39:27.029 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:39:27.032 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+WHERE [p].[ReaderNumber] = @__p_0
+2023-06-10 00:39:27.035 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-06-10 00:39:27.036 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Put (LibraryApplication.Api) in 11.3435ms
+2023-06-10 00:39:27.037 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Put (LibraryApplication.Api)'
+2023-06-10 00:39:27.038 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7032/Persons/8 application/json;+charset=utf-8 96 - 204 - - 20.0522ms
+2023-06-10 00:39:27.043 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons - -
+2023-06-10 00:39:27.043 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:39:27.045 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:39:27.046 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Person]]] Get() on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-10 00:39:27.048 +02:00 [INF] People endpoint was called
+2023-06-10 00:39:27.048 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:39:27.050 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+2023-06-10 00:39:27.053 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Person, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:39:27.054 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 6.3327ms
+2023-06-10 00:39:27.055 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:39:27.056 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons - - - 200 - application/json;+charset=utf-8 14.1622ms
+2023-06-10 00:43:13.845 +02:00 [INF] Now listening on: https://localhost:7032
+2023-06-10 00:43:13.918 +02:00 [INF] Now listening on: http://localhost:5255
+2023-06-10 00:43:13.922 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-10 00:43:13.923 +02:00 [INF] Hosting environment: Development
+2023-06-10 00:43:13.923 +02:00 [INF] Content root path: C:\Users\it\Documents\Egyetem\LibraryApplication\LibraryApplication\LibraryApplication.Api\
+2023-06-10 00:43:16.105 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - -
+2023-06-10 00:43:16.643 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - - - 200 - text/html;charset=utf-8 541.6373ms
+2023-06-10 00:43:16.657 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - -
+2023-06-10 00:43:16.657 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - -
+2023-06-10 00:43:16.673 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 15.3594ms
+2023-06-10 00:43:16.705 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 47.8579ms
+2023-06-10 00:43:16.866 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - -
+2023-06-10 00:43:17.127 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 261.6169ms
+2023-06-10 00:44:02.981 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons - -
+2023-06-10 00:44:02.985 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:44:02.991 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:44:03.004 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Person]]] Get() on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-10 00:44:03.160 +02:00 [INF] People endpoint was called
+2023-06-10 00:44:03.841 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:44:04.479 +02:00 [INF] Executed DbCommand (44ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+2023-06-10 00:44:04.589 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Person, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:44:04.603 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 1592.4144ms
+2023-06-10 00:44:04.606 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:44:04.614 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons - - - 200 - application/json;+charset=utf-8 1633.3367ms
+2023-06-10 00:44:11.527 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Borrows/Dávid - -
+2023-06-10 00:44:11.529 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.BorrowsController.Get (LibraryApplication.Api)'
+2023-06-10 00:44:11.539 +02:00 [INF] Route matched with {action = "Get", controller = "Borrows"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Borrow]]] Get(System.String) on controller LibraryApplication.Api.Controllers.BorrowsController (LibraryApplication.Api).
+2023-06-10 00:44:11.559 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:44:11.759 +02:00 [INF] Executed DbCommand (34ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+WHERE [p].[Name] = @__name_0
+2023-06-10 00:44:11.765 +02:00 [INF] Executing OkObjectResult, writing value of type 'Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[[<>f__AnonymousType9`3[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], LibraryApplication.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:44:11.802 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b0].[Title], [b].[BorrowDate], [b].[ReturnDate]
+FROM [Borrows] AS [b]
+INNER JOIN [Persons] AS [p] ON [b].[ReaderNumber] = [p].[ReaderNumber]
+INNER JOIN [Books] AS [b0] ON [b].[InventoryNumber] = [b0].[InventoryNumber]
+WHERE [p].[Name] = @__name_0
+2023-06-10 00:44:11.810 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.BorrowsController.Get (LibraryApplication.Api) in 269.1108ms
+2023-06-10 00:44:11.811 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.BorrowsController.Get (LibraryApplication.Api)'
+2023-06-10 00:44:11.812 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Borrows/Dávid - - - 200 - application/json;+charset=utf-8 284.6512ms
+2023-06-10 00:48:33.661 +02:00 [INF] Now listening on: https://localhost:7032
+2023-06-10 00:48:33.709 +02:00 [INF] Now listening on: http://localhost:5255
+2023-06-10 00:48:33.713 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-10 00:48:33.714 +02:00 [INF] Hosting environment: Development
+2023-06-10 00:48:33.715 +02:00 [INF] Content root path: C:\Users\it\Documents\Egyetem\LibraryApplication\LibraryApplication\LibraryApplication.Api\
+2023-06-10 00:48:35.101 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - -
+2023-06-10 00:48:35.637 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - - - 200 - text/html;charset=utf-8 540.3417ms
+2023-06-10 00:48:35.657 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - -
+2023-06-10 00:48:35.664 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - -
+2023-06-10 00:48:35.673 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 15.9246ms
+2023-06-10 00:48:35.723 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 58.7351ms
+2023-06-10 00:48:35.867 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - -
+2023-06-10 00:48:36.036 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 169.1719ms
+2023-06-10 00:48:45.348 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons - -
+2023-06-10 00:48:45.352 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:48:45.359 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:48:45.372 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Person]]] Get() on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-10 00:48:45.529 +02:00 [INF] People endpoint was called
+2023-06-10 00:48:46.186 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:48:46.821 +02:00 [INF] Executed DbCommand (44ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+2023-06-10 00:48:46.930 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Person, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:48:46.942 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 1562.3728ms
+2023-06-10 00:48:46.945 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:48:46.953 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons - - - 200 - application/json;+charset=utf-8 1604.6111ms
+2023-06-10 00:49:06.132 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons/8 - -
+2023-06-10 00:49:06.134 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:49:06.134 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:49:06.145 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-10 00:49:06.166 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:49:06.380 +02:00 [INF] Executed DbCommand (30ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+WHERE [p].[ReaderNumber] = @__p_0
+2023-06-10 00:49:06.387 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-10 00:49:06.432 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b0].[Title], [b].[ReturnDate]
+FROM [Borrows] AS [b]
+INNER JOIN [Persons] AS [p] ON [b].[ReaderNumber] = [p].[ReaderNumber]
+INNER JOIN [Books] AS [b0] ON [b].[InventoryNumber] = [b0].[InventoryNumber]
+WHERE [p].[ReaderNumber] = @__id_0
+2023-06-10 00:49:06.439 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 292.351ms
+2023-06-10 00:49:06.441 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:49:06.441 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons/8 - - - 200 - application/json;+charset=utf-8 309.8109ms
+2023-06-10 00:49:45.811 +02:00 [INF] Now listening on: https://localhost:7032
+2023-06-10 00:49:45.856 +02:00 [INF] Now listening on: http://localhost:5255
+2023-06-10 00:49:45.859 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-10 00:49:45.860 +02:00 [INF] Hosting environment: Development
+2023-06-10 00:49:45.861 +02:00 [INF] Content root path: C:\Users\it\Documents\Egyetem\LibraryApplication\LibraryApplication\LibraryApplication.Api\
+2023-06-10 00:49:46.848 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/index.html - -
+2023-06-10 00:49:47.203 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - -
+2023-06-10 00:49:47.214 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/index.html - - - 200 - text/html;charset=utf-8 371.0757ms
+2023-06-10 00:49:47.214 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 9.5796ms
+2023-06-10 00:49:47.221 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/_vs/browserLink - -
+2023-06-10 00:49:47.243 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 22.7094ms
+2023-06-10 00:49:47.355 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - -
+2023-06-10 00:49:47.523 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 167.9568ms
+2023-06-10 00:49:58.164 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons - -
+2023-06-10 00:49:58.168 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:49:58.174 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:49:58.190 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Person]]] Get() on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-10 00:49:58.350 +02:00 [INF] People endpoint was called
+2023-06-10 00:49:59.028 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:49:59.676 +02:00 [INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+2023-06-10 00:49:59.785 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Person, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:49:59.798 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 1600.3031ms
+2023-06-10 00:49:59.801 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:49:59.808 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons - - - 200 - application/json;+charset=utf-8 1644.2216ms
+2023-06-10 00:50:04.254 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons/8 - -
+2023-06-10 00:50:04.255 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:50:04.256 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:50:04.268 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-10 00:50:04.285 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:50:04.500 +02:00 [INF] Executed DbCommand (31ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+WHERE [p].[ReaderNumber] = @__p_0
+2023-06-10 00:50:04.508 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-10 00:50:04.551 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b0].[Title], [b].[ReturnDate]
+FROM [Borrows] AS [b]
+INNER JOIN [Persons] AS [p] ON [b].[ReaderNumber] = [p].[ReaderNumber]
+INNER JOIN [Books] AS [b0] ON [b].[InventoryNumber] = [b0].[InventoryNumber]
+WHERE [p].[ReaderNumber] = @__id_0
+2023-06-10 00:50:04.558 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 288.4982ms
+2023-06-10 00:50:04.560 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:50:04.560 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons/8 - - - 200 - application/json;+charset=utf-8 306.3586ms
+2023-06-10 00:50:10.253 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7032/Persons/8 - -
+2023-06-10 00:50:10.255 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:50:10.257 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7032/Persons/8 - - - 204 - - 3.6652ms
+2023-06-10 00:50:10.258 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7032/Persons/8 application/json;+charset=utf-8 96
+2023-06-10 00:50:10.260 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:50:10.260 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Put (LibraryApplication.Api)'
+2023-06-10 00:50:10.263 +02:00 [INF] Route matched with {action = "Put", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Put(Int32, LibraryApplication.Contract.Person) on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-10 00:50:10.319 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:50:10.326 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+WHERE [p].[ReaderNumber] = @__p_0
+2023-06-10 00:50:10.360 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-06-10 00:50:10.362 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Put (LibraryApplication.Api) in 97.2493ms
+2023-06-10 00:50:10.363 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Put (LibraryApplication.Api)'
+2023-06-10 00:50:10.364 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7032/Persons/8 application/json;+charset=utf-8 96 - 204 - - 105.2835ms
+2023-06-10 00:50:10.373 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons - -
+2023-06-10 00:50:10.374 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:50:10.375 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:50:10.377 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Person]]] Get() on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-10 00:50:10.379 +02:00 [INF] People endpoint was called
+2023-06-10 00:50:10.380 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:50:10.383 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+2023-06-10 00:50:10.386 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Person, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:50:10.387 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 7.6737ms
+2023-06-10 00:50:10.388 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:50:10.390 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons - - - 200 - application/json;+charset=utf-8 17.0583ms
+2023-06-10 00:50:11.737 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons/9 - -
+2023-06-10 00:50:11.738 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:50:11.739 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:50:11.740 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-10 00:50:11.743 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:50:11.746 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+WHERE [p].[ReaderNumber] = @__p_0
+2023-06-10 00:50:11.748 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-10 00:50:11.751 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b0].[Title], [b].[ReturnDate]
+FROM [Borrows] AS [b]
+INNER JOIN [Persons] AS [p] ON [b].[ReaderNumber] = [p].[ReaderNumber]
+INNER JOIN [Books] AS [b0] ON [b].[InventoryNumber] = [b0].[InventoryNumber]
+WHERE [p].[ReaderNumber] = @__id_0
+2023-06-10 00:50:11.753 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 10.2237ms
+2023-06-10 00:50:11.754 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:50:11.754 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons/9 - - - 200 - application/json;+charset=utf-8 17.7500ms
+2023-06-10 00:50:13.434 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7032/Persons/9 - -
+2023-06-10 00:50:13.435 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:50:13.436 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7032/Persons/9 - - - 204 - - 1.5462ms
+2023-06-10 00:50:13.437 +02:00 [INF] Request starting HTTP/2 DELETE https://localhost:7032/Persons/9 - -
+2023-06-10 00:50:13.438 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:50:13.439 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Delete (LibraryApplication.Api)'
+2023-06-10 00:50:13.442 +02:00 [INF] Route matched with {action = "Delete", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-10 00:50:13.445 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:50:13.448 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+WHERE [p].[ReaderNumber] = @__p_0
+2023-06-10 00:50:13.533 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Persons]
+WHERE [ReaderNumber] = @p0;
+SELECT @@ROWCOUNT;
+2023-06-10 00:50:13.575 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-06-10 00:50:13.576 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Delete (LibraryApplication.Api) in 132.0836ms
+2023-06-10 00:50:13.577 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Delete (LibraryApplication.Api)'
+2023-06-10 00:50:13.578 +02:00 [INF] Request finished HTTP/2 DELETE https://localhost:7032/Persons/9 - - - 204 - - 140.5267ms
+2023-06-10 00:50:13.583 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons - -
+2023-06-10 00:50:13.584 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:50:13.585 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:50:13.586 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Person]]] Get() on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-10 00:50:13.587 +02:00 [INF] People endpoint was called
+2023-06-10 00:50:13.588 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:50:13.590 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+2023-06-10 00:50:13.593 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Person, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:50:13.594 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 6.6162ms
+2023-06-10 00:50:13.595 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:50:13.596 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons - - - 200 - application/json;+charset=utf-8 13.2733ms
+2023-06-10 00:50:39.195 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7032/Persons - -
+2023-06-10 00:50:39.196 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:50:39.197 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7032/Persons - - - 204 - - 2.3685ms
+2023-06-10 00:50:39.200 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7032/Persons application/json;+charset=utf-8 94
+2023-06-10 00:50:39.201 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:50:39.202 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Post (LibraryApplication.Api)'
+2023-06-10 00:50:39.205 +02:00 [INF] Route matched with {action = "Post", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(LibraryApplication.Contract.Person) on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-10 00:50:39.209 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:50:39.246 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Persons] ([Address], [BirthDate], [Name])
+VALUES (@p0, @p1, @p2);
+SELECT [ReaderNumber]
+FROM [Persons]
+WHERE @@ROWCOUNT = 1 AND [ReaderNumber] = scope_identity();
+2023-06-10 00:50:39.273 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-06-10 00:50:39.275 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Post (LibraryApplication.Api) in 68.8121ms
+2023-06-10 00:50:39.276 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Post (LibraryApplication.Api)'
+2023-06-10 00:50:39.277 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7032/Persons application/json;+charset=utf-8 94 - 200 0 - 76.2623ms
+2023-06-10 00:50:39.282 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons - -
+2023-06-10 00:50:39.283 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:50:39.284 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:50:39.285 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Person]]] Get() on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-10 00:50:39.286 +02:00 [INF] People endpoint was called
+2023-06-10 00:50:39.287 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:50:39.290 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+2023-06-10 00:50:39.292 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Person, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:50:39.293 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 6.9665ms
+2023-06-10 00:50:39.295 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:50:39.296 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons - - - 200 - application/json;+charset=utf-8 13.5896ms
+2023-06-10 00:50:43.617 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons/8 - -
+2023-06-10 00:50:43.618 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:50:43.618 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:50:43.619 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-10 00:50:43.621 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:50:43.625 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+WHERE [p].[ReaderNumber] = @__p_0
+2023-06-10 00:50:43.627 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-10 00:50:43.629 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b0].[Title], [b].[ReturnDate]
+FROM [Borrows] AS [b]
+INNER JOIN [Persons] AS [p] ON [b].[ReaderNumber] = [p].[ReaderNumber]
+INNER JOIN [Books] AS [b0] ON [b].[InventoryNumber] = [b0].[InventoryNumber]
+WHERE [p].[ReaderNumber] = @__id_0
+2023-06-10 00:50:43.631 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 10.1366ms
+2023-06-10 00:50:43.632 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:50:43.633 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons/8 - - - 200 - application/json;+charset=utf-8 16.4187ms
+2023-06-10 00:50:50.707 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7032/Persons/8 - -
+2023-06-10 00:50:50.708 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:50:50.709 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7032/Persons/8 - - - 204 - - 2.0243ms
+2023-06-10 00:50:50.710 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7032/Persons/8 application/json;+charset=utf-8 96
+2023-06-10 00:50:50.711 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:50:50.712 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Put (LibraryApplication.Api)'
+2023-06-10 00:50:50.713 +02:00 [INF] Route matched with {action = "Put", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Put(Int32, LibraryApplication.Contract.Person) on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-10 00:50:50.716 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:50:50.719 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+WHERE [p].[ReaderNumber] = @__p_0
+2023-06-10 00:50:50.728 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Persons] SET [BirthDate] = @p0
+WHERE [ReaderNumber] = @p1;
+SELECT @@ROWCOUNT;
+2023-06-10 00:50:50.734 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-06-10 00:50:50.734 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Put (LibraryApplication.Api) in 19.036ms
+2023-06-10 00:50:50.735 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Put (LibraryApplication.Api)'
+2023-06-10 00:50:50.736 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7032/Persons/8 application/json;+charset=utf-8 96 - 204 - - 25.8154ms
+2023-06-10 00:50:50.747 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7032/Persons - -
+2023-06-10 00:50:50.749 +02:00 [INF] CORS policy execution successful.
+2023-06-10 00:50:50.750 +02:00 [INF] Executing endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:50:50.750 +02:00 [INF] Route matched with {action = "Get", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[LibraryApplication.Contract.Person]]] Get() on controller LibraryApplication.Api.Controllers.PersonsController (LibraryApplication.Api).
+2023-06-10 00:50:50.752 +02:00 [INF] People endpoint was called
+2023-06-10 00:50:50.752 +02:00 [INF] Entity Framework Core 6.0.16 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: using lazy loading proxies 
+2023-06-10 00:50:50.755 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ReaderNumber], [p].[Address], [p].[BirthDate], [p].[Name]
+FROM [Persons] AS [p]
+2023-06-10 00:50:50.758 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApplication.Contract.Person, LibraryApplication.Contract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-10 00:50:50.759 +02:00 [INF] Executed action LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api) in 7.1519ms
+2023-06-10 00:50:50.760 +02:00 [INF] Executed endpoint 'LibraryApplication.Api.Controllers.PersonsController.Get (LibraryApplication.Api)'
+2023-06-10 00:50:50.761 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7032/Persons - - - 200 - application/json;+charset=utf-8 15.9494ms

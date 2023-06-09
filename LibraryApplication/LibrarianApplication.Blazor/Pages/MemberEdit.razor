@@ -1,4 +1,4 @@
-﻿@page "/persons/{id:int}"
+﻿@page "/persons/edit/{id:int}"
 @using LibrarianApplication.Blazor.Model;
 @using LibrarianApplication.Blazor.Services
 @inject IPersonService PersonService
@@ -10,7 +10,7 @@
 }
 else
 {
-    <h3>@Person.Name's details</h3>
+    <h3>Edit @Person.Name</h3>
 
     <MemberForm Person="@Person" ButtonTitle="Edit" HandleValidSubmitAsync="@HandleValidSubmitAsync" />
     <button onclick="@HandleDeleteAsync" class="btn btn-danger form-control">Delete</button>

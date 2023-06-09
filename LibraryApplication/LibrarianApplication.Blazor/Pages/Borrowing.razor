@@ -1,0 +1,18 @@
+﻿@page "/borrowing"
+@using LibrarianApplication.Blazor.Model;
+@using LibrarianApplication.Blazor.Services;
+@inject IBorrowService BorrowService
+@inject NavigationManager NavigationManager
+
+<h3>Borrowing</h3>
+<BorrowForm Borrow="@Borrow" ButtonTitle="Add" HandleValidSubmitAsync="@HandleValidSubmitAsync" />
+
+@code {
+    private Borrow Borrow { get; set; } = new();
+
+    private async Task HandleValidSubmitAsync()
+    {
+        await BorrowService.AddBorrowAsync(Borrow);
+        NavigationManager.NavigateTo("/books");
+    }
+}
