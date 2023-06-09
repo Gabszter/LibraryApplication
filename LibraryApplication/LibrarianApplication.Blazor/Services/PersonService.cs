@@ -12,14 +12,14 @@ namespace LibrarianApplication.Blazor.Services
             _httpClient = httpClient;
         }
 
-        public async Task<IEnumerable<Person>?> GetAllPeopleAsync() => await _httpClient.GetFromJsonAsync<IEnumerable<Person>>("Persons");
-
-        public async Task<Person?> GetPeopleByIdAsync(int id) => await _httpClient.GetFromJsonAsync<Person?>($"Persons/{id}");
-
-        public async Task UpdatePersonAsync(int id, Person person) => await _httpClient.PutAsJsonAsync($"Persons/{id}", person);
+        public async Task AddPersonAsync(Person person) => await _httpClient.PostAsJsonAsync($"Persons", person);
 
         public async Task DeletePersonAsync(int id) => await _httpClient.DeleteAsync($"Persons/{id}");
 
-        public async Task AddPersonAsync(Person person) => await _httpClient.PostAsJsonAsync($"Persons", person);
+        public async Task<IEnumerable<Person>?> GetAllPersonAsync() => await _httpClient.GetFromJsonAsync<IEnumerable<Person>>("Persons");
+
+        public async Task<Person?> GetPersonByIdAsync(int id) => await _httpClient.GetFromJsonAsync<Person?>($"Persons/{id}");
+
+        public async Task UpdatePersonAsync(int id, Person person) => await _httpClient.PutAsJsonAsync($"Persons/{id}", person);
     }
 }

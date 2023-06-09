@@ -4,13 +4,15 @@ namespace LibrarianApplication.Blazor.Services
 {
     public interface IPersonService
     {
-        Task<IEnumerable<Person>?> GetAllPeopleAsync();
+        Task AddPersonAsync(Person person);
 
-        Task<Person?> GetPeopleByIdAsync(int id);
+        Task DeletePersonAsync(int id);
+
+        Task<IEnumerable<Person>?> GetAllPersonAsync();
+
+        Task<Person?> GetPersonByIdAsync(int id);
 
         Task UpdatePersonAsync(int id, Person person);
 
-        Task DeletePersonAsync(int id);
-        Task AddPersonAsync(Person person);
     }
 }

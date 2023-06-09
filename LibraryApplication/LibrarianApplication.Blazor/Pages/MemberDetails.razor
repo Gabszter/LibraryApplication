@@ -24,7 +24,7 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        Person = await PersonService.GetPeopleByIdAsync(Id);
+        Person = await PersonService.GetPersonByIdAsync(Id);
     }
 
     private async Task HandleValidSubmitAsync()

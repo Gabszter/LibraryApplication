@@ -9,7 +9,7 @@
 }
 else
 {
-    <h3>MemberList</h3>
+    <h3>Member List</h3>
     <table class="table table-bordered table-hover">
         <thead>
             <tr>
@@ -39,6 +39,6 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        Members = await PersonService.GetAllPeopleAsync();
+        Members = await PersonService.GetAllPersonAsync();
     }
 }

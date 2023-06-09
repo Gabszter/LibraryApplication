@@ -1,0 +1,18 @@
+﻿@page "/books/add"
+@using LibrarianApplication.Blazor.Model;
+@using LibrarianApplication.Blazor.Services;
+@inject IBookService BookService
+@inject NavigationManager NavigationManager
+
+<h3>Add Book</h3>
+<BookForm Book="@Book" ButtonTitle="Add" HandleValidSubmitAsync="@HandleValidSubmitAsync" />
+
+@code {
+    private Book Book { get; set; } = new();
+
+    private async Task HandleValidSubmitAsync()
+    {
+        await BookService.AddBookAsync(Book);
+        NavigationManager.NavigateTo("/books");
+    }
+}

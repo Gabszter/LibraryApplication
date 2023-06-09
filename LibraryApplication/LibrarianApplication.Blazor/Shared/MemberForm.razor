@@ -2,10 +2,6 @@
 <EditForm Model="@Person" OnValidSubmit="@HandleValidSubmitAsync">
     <DataAnnotationsValidator />
     <div class="mb0">
-        <label class="col-form-label">ReaderNumber</label>
-        <InputNumber @bind-Value="@Person.ReaderNumber" class="form-control" />
-    </div>
-    <div class="mb0">
         <label class="col-form-label">Name</label>
         <InputText @bind-Value="@Person.Name" class="form-control" />
         <ValidationMessage For="() => Person.Name" />
