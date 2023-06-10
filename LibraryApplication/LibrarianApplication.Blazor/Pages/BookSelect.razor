@@ -1,0 +1,58 @@
+﻿@page "/books/borrow/{memberid:int}"
+@using LibrarianApplication.Blazor.Model;
+@using LibrarianApplication.Blazor.Services;
+@inject IBookService BookService
+@inject IBorrowService BorrowService
+@inject NavigationManager NavigationManager
+
+@if (Books is null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <h3>Book List</h3>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>InventoryNumber</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Publisher</th>
+                <th>EditionYear</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in Books)
+            {
+                <tr>
+                    <td>@book.InventoryNumber</td>
+                    <td>@book.Title</td>
+                    <td>@book.Author</td>
+                    <td>@book.Publisher</td>
+                    <td>@book.EditionYear</td>
+                    <td><button class="btn btn-primary" @onclick="() => BorrowBook(book.InventoryNumber)">Borrow</button></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    [Parameter]
+    public int MemberId { get; set; }
+
+    private IEnumerable<Book>? Books { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Books = await BookService.GetAllBooksInAsync();
+    }
+
+    private async Task BorrowBook(int InventoryNumber)
+    {
+        Borrow borrowTmp = new Borrow { ReaderNumber = MemberId, InventoryNumber = InventoryNumber, BorrowDate = DateTime.Now, ReturnDate = DateTime.Now.AddDays(14) };
+        await BorrowService.AddBorrowAsync(borrowTmp);
+        NavigationManager.NavigateTo($"/books/borrow/{MemberId}", true);
+    }
+}

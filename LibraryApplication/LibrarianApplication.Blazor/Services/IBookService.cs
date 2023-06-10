@@ -9,6 +9,7 @@ namespace LibrarianApplication.Blazor.Services
         Task DeleteBookAsync(int id);
 
         Task<IEnumerable<Book>?> GetAllBookAsync();
+        Task<IEnumerable<Book>?> GetAllBooksInAsync();
 
         Task<Book?> GetBookByIdAsync(int id);
 

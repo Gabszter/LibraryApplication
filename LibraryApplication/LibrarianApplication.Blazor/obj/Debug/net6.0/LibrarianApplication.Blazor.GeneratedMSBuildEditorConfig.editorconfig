@@ -28,6 +28,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va0xpc3QucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/it/Documents/Egyetem/LibraryApplication/LibraryApplication/LibrarianApplication.Blazor/Pages/BookReturn.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va1JldHVybi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/it/Documents/Egyetem/LibraryApplication/LibraryApplication/LibrarianApplication.Blazor/Pages/BookSelect.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va1NlbGVjdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/it/Documents/Egyetem/LibraryApplication/LibraryApplication/LibrarianApplication.Blazor/Pages/BookStatus.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va1N0YXR1cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -54,6 +62,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/it/Documents/Egyetem/LibraryApplication/LibraryApplication/LibrarianApplication.Blazor/Pages/MemberList.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVtYmVyTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/it/Documents/Egyetem/LibraryApplication/LibraryApplication/LibrarianApplication.Blazor/Pages/MemberSelect.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVtYmVyU2VsZWN0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/it/Documents/Egyetem/LibraryApplication/LibraryApplication/LibrarianApplication.Blazor/Shared/BookForm.razor]

@@ -1,0 +1,41 @@
+﻿@page "/persons/select"
+@using LibrarianApplication.Blazor.Model;
+@using LibrarianApplication.Blazor.Services;
+@inject IPersonService PersonService
+
+@if (Members is null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <h3>Member List</h3>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>ReaderNumber</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var member in Members)
+            {
+                <tr>
+                    <td>@member.ReaderNumber</td>
+                    <td>@member.Name</td>
+                    <td><a href="books/borrow/@member.ReaderNumber" class="btn btn-primary">Borrow</a></td>
+                    <td><a href="books/return/@member.ReaderNumber" class="btn btn-primary">Return</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private IEnumerable<Person>? Members { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Members = await PersonService.GetAllPersonAsync();
+    }
+}

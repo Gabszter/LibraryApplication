@@ -19,6 +19,18 @@ namespace LibrarianApplication.Blazor.Services
         public async Task DeleteBookAsync(int id) => await _httpClient.DeleteAsync($"Books/{id}");
 
         public async Task<IEnumerable<Book>?> GetAllBookAsync() => await _httpClient.GetFromJsonAsync<IEnumerable<Book>>("Books");
+        public async Task<IEnumerable<Book>?> GetAllBooksInAsync()
+        {
+            IEnumerable<Book>? books = await GetAllBookAsync();
+            List<Book>? booksIn = new List<Book>();
+            foreach (var book in books)
+            {
+                Book bookTmp = await GetBookByIdAsync(book.InventoryNumber);
+                if (bookTmp.Status.Equals("In")) booksIn.Add(book);
+            }
+
+            return booksIn;
+        }
 
         public async Task<Book?> GetBookByIdAsync(int id) => await _httpClient.GetFromJsonAsync<Book?>($"Books/GetById/{id}");
 

@@ -55,7 +55,8 @@ namespace LibraryApplication.Api.Controllers
                                      join p in _libraryContext.Persons on bw.ReaderNumber equals p.ReaderNumber
                                      join b in _libraryContext.Books on bw.InventoryNumber equals b.InventoryNumber
                                      where p.Name == name
-                                     select new { Title = b.Title, 
+                                     select new { Title = b.Title,
+                                                  InventoryNumber = b.InventoryNumber,
                                                   BorrowDate = bw.BorrowDate, 
                                                   ReturnDate = bw.ReturnDate };
             return Ok(response);
