@@ -1,18 +1,64 @@
-﻿@page "/borrowing"
+﻿@page "/borrow/{memberId:int}/{bookId:int}"
 @using LibrarianApplication.Blazor.Model;
 @using LibrarianApplication.Blazor.Services;
 @inject IBorrowService BorrowService
+@inject IPersonService PersonService
+@inject IBookService BookService
 @inject NavigationManager NavigationManager
 
 <h3>Borrowing</h3>
-<BorrowForm Borrow="@Borrow" ButtonTitle="Add" HandleValidSubmitAsync="@HandleValidSubmitAsync" />
+@if (Book is null || Member is null)
+{
+    <p>Loading....</p>
+}
+else
+{
+    <EditForm Model="@Borrow" OnValidSubmit="@HandleValidSubmitAsync">
+        <DataAnnotationsValidator />
+        <div class="mb0">
+            <label class="col-form-label">Member</label>
+            <label class="form-control" style="color: dimgrey">@Member.Name - @MemberId</label>
+        </div>
+        <div class="mb0">
+            <label class="col-form-label">Book</label>
+            <label class="form-control" style="color: dimgrey">@Book.Title - @BookId</label>
+        </div>
+        <div class="mb0">
+            <label class="col-form-label">Borrow Date</label>
+            <InputDate @bind-Value="@Borrow.BorrowDate" class="form-control" />
+            <ValidationMessage For="() => Borrow.BorrowDate" />
+        </div>
+        <div class="mb0">
+            <label class="col-form-label">Return Date</label>
+            <InputDate @bind-Value="@Borrow.ReturnDate" class="form-control" />
+            <ValidationMessage For="() => Borrow.ReturnDate" />
+        </div>
+        <button style="margin-top:10px" type="submit" class="btn btn-primary form-control mb-3">Borrow</button>
+    </EditForm>
+}
 
 @code {
+    [Parameter]
+    public int MemberId { get; set; }
+    [Parameter]
+    public int BookId { get; set; }
     private Borrow Borrow { get; set; } = new();
+    private Person Member { get; set; }
+    private Book Book { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Member = await PersonService.GetPersonByIdAsync(MemberId);
+        Book = await BookService.GetBookByIdAsync(BookId);
+        Borrow.ReaderNumber = MemberId;
+        Borrow.InventoryNumber = BookId;
+        Borrow.BorrowDate = DateTime.Now;
+        Borrow.ReturnDate = DateTime.Now.AddDays(14);
+    }
 
     private async Task HandleValidSubmitAsync()
     {
         await BorrowService.AddBorrowAsync(Borrow);
-        NavigationManager.NavigateTo("/books");
+        NavigationManager.NavigateTo($"/books/borrow/{MemberId}");
     }
 }

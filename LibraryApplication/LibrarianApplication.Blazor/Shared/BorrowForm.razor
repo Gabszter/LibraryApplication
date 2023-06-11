@@ -2,16 +2,6 @@
 <EditForm Model="@Borrow" OnValidSubmit="@HandleValidSubmitAsync">
     <DataAnnotationsValidator />
     <div class="mb0">
-        <label class="col-form-label">ReaderNumber</label>
-        <InputNumber @bind-Value="@Borrow.ReaderNumber" class="form-control" />
-        <ValidationMessage For="() => Borrow.ReaderNumber" />
-    </div>
-    <div class="mb0">
-        <label class="col-form-label">InventoryNumber</label>
-        <InputNumber @bind-Value="@Borrow.InventoryNumber" class="form-control" />
-        <ValidationMessage For="() => Borrow.InventoryNumber" />
-    </div>
-    <div class="mb0">
         <label class="col-form-label">Publisher</label>
         <InputDate @bind-Value="@Borrow.BorrowDate" class="form-control" />
         <ValidationMessage For="() => Borrow.BorrowDate" />
@@ -21,16 +11,16 @@
         <InputDate @bind-Value="@Borrow.ReturnDate" class="form-control" />
         <ValidationMessage For="() => Borrow.ReturnDate" />
     </div>
-    <button style="margin-top:10px" type="submit" class="btn btn-primary form-control mb-3">@ButtonTitle</button>
+    <button style="margin-top:10px" type="submit" class="btn btn-primary form-control mb-3">Borrow</button>
 </EditForm>
 
 @code {
     [Parameter]
     public Borrow Borrow { get; set; }
-
     [Parameter]
-    public string ButtonTitle { get; set; }
-
+    public Book Book { get; set; }
+    [Parameter]
+    public Person Member { get; set; }
     [Parameter]
     public Func<Task> HandleValidSubmitAsync { get; set; }
 }
