@@ -1,8 +1,7 @@
 ﻿
 using LibrarianApplication.Blazor.Model;
-using System.Collections.Generic;
-using System.Net.Http;
 using System.Net.Http.Json;
+using LibraryApp.Contract;
 
 namespace LibrarianApplication.Blazor.Services
 {
@@ -17,7 +16,7 @@ namespace LibrarianApplication.Blazor.Services
 
         public async Task AddBorrowAsync(Borrow borrow) => await _httpClient.PostAsJsonAsync($"Borrows", borrow);
 
-        public async Task<IEnumerable<Borrow>?> GetBorrowByNameAsync(string name) => await _httpClient.GetFromJsonAsync<IEnumerable<Borrow>?>($"Borrows/{name}");
+        public async Task<IEnumerable<BorrowInfo>?> GetBorrowByNameAsync(string name) => await _httpClient.GetFromJsonAsync<IEnumerable<BorrowInfo>?>($"Borrows/{name}");
 
         public async Task<IEnumerable<Borrow>?> GetAllBorrowsAsync() => await _httpClient.GetFromJsonAsync<IEnumerable<Borrow>?>("Borrows");
 

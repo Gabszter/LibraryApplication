@@ -1,6 +1,7 @@
 ﻿@page "/persons/{id:int}"
 @using LibrarianApplication.Blazor.Model;
-@using LibrarianApplication.Blazor.Services
+@using LibrarianApplication.Blazor.Services;
+@using LibraryApp.Contract;
 @inject IPersonService PersonService
 @inject IBorrowService BorrowService
 @inject NavigationManager NavigationManager
@@ -21,7 +22,7 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var borrow in Borrows)
+            @foreach (var borrow in BorrowInfos)
             {
                 @if (DateTime.Now>borrow.ReturnDate)
                 {
@@ -51,11 +52,11 @@ else
 
     private Person? Person { get; set; }
 
-    private IEnumerable<Borrow>? Borrows { get; set; }
+    private IEnumerable<BorrowInfo>? BorrowInfos { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
         Person = await PersonService.GetPersonByIdAsync(Id);
-        Borrows = await BorrowService.GetBorrowByNameAsync(Person.Name);
+        BorrowInfos = await BorrowService.GetBorrowByNameAsync(Person.Name);
     }
 }

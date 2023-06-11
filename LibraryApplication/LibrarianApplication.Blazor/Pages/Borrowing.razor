@@ -1,13 +1,14 @@
 ﻿@page "/borrow/{memberId:int}/{bookId:int}"
 @using LibrarianApplication.Blazor.Model;
 @using LibrarianApplication.Blazor.Services;
+@using LibraryApp.Contract;
 @inject IBorrowService BorrowService
 @inject IPersonService PersonService
 @inject IBookService BookService
 @inject NavigationManager NavigationManager
 
 <h3>Borrowing</h3>
-@if (Book is null || Member is null)
+@if (BookInfo is null || Member is null)
 {
     <p>Loading....</p>
 }
@@ -17,11 +18,11 @@ else
         <DataAnnotationsValidator />
         <div class="mb0">
             <label class="col-form-label">Member</label>
-            <label class="form-control" style="color: dimgrey">@Member.Name - @MemberId</label>
+            <label class="form-control" style="color: dimgrey">@Member.Name  [@MemberId]</label>
         </div>
         <div class="mb0">
             <label class="col-form-label">Book</label>
-            <label class="form-control" style="color: dimgrey">@Book.Title - @BookId</label>
+            <label class="form-control" style="color: dimgrey">@BookInfo.Title  [@BookId]</label>
         </div>
         <div class="mb0">
             <label class="col-form-label">Borrow Date</label>
@@ -35,6 +36,7 @@ else
         </div>
         <button style="margin-top:10px" type="submit" class="btn btn-primary form-control mb-3">Borrow</button>
     </EditForm>
+    <a href="/borrow/@MemberId" class="btn btn-primary">Back</a>
 }
 
 @code {
@@ -44,12 +46,12 @@ else
     public int BookId { get; set; }
     private Borrow Borrow { get; set; } = new();
     private Person Member { get; set; }
-    private Book Book { get; set; }
+    private BookInfo BookInfo { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
         Member = await PersonService.GetPersonByIdAsync(MemberId);
-        Book = await BookService.GetBookByIdAsync(BookId);
+        BookInfo = await BookService.GetBookByIdAsync(BookId);
         Borrow.ReaderNumber = MemberId;
         Borrow.InventoryNumber = BookId;
         Borrow.BorrowDate = DateTime.Now;
@@ -59,6 +61,6 @@ else
     private async Task HandleValidSubmitAsync()
     {
         await BorrowService.AddBorrowAsync(Borrow);
-        NavigationManager.NavigateTo($"/books/borrow/{MemberId}");
+        NavigationManager.NavigateTo($"/borrow/{MemberId}");
     }
 }

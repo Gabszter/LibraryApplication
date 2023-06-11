@@ -1,16 +1,17 @@
 ﻿@page "/books/getbyid/{id:int}"
 @using LibrarianApplication.Blazor.Model;
-@using LibrarianApplication.Blazor.Services
+@using LibrarianApplication.Blazor.Services;
+@using LibraryApp.Contract;
 @inject IBookService BookService
 @inject NavigationManager NavigationManager
 
-@if (Book is null)
+@if (BookInfo is null)
 {
     <p>Loading...</p>
 }
 else
 {
-    <h3>@Book.Title's status</h3>
+    <h3>@BookInfo.Title's status</h3>
 
     <table class="table table-bordered table-hover">
         <thead>
@@ -23,10 +24,10 @@ else
         </thead>
         <tbody>
             <tr>
-                <td>@Book.Title</td>
-                <td>@Book.Status</td>
-                <td>@Book.Borrower</td>
-                <td>@Book.DueDate</td>
+                <td>@BookInfo.Title</td>
+                <td>@BookInfo.Status</td>
+                <td>@BookInfo.Borrower</td>
+                <td>@BookInfo.DueDate</td>
             </tr>
         </tbody>
     </table>
@@ -38,10 +39,10 @@ else
     [Parameter]
     public int Id { get; set; }
 
-    private Book? Book { get; set; }
+    private BookInfo? BookInfo { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        Book = await BookService.GetBookByIdAsync(Id);
+        BookInfo = await BookService.GetBookByIdAsync(Id);
     }
 }

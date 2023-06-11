@@ -1,5 +1,5 @@
 ﻿using LibrarianApplication.Blazor.Model;
-using System.Net.Http;
+using LibraryApp.Contract;
 using System.Net.Http.Json;
 
 namespace LibrarianApplication.Blazor.Services
@@ -19,20 +19,20 @@ namespace LibrarianApplication.Blazor.Services
         public async Task DeleteBookAsync(int id) => await _httpClient.DeleteAsync($"Books/{id}");
 
         public async Task<IEnumerable<Book>?> GetAllBookAsync() => await _httpClient.GetFromJsonAsync<IEnumerable<Book>>("Books");
-        public async Task<IEnumerable<Book>?> GetAllBooksInAsync()
+        public async Task<IEnumerable<Book>?> GetAllAvailableBookAsync()
         {
             IEnumerable<Book>? books = await GetAllBookAsync();
             List<Book>? booksIn = new List<Book>();
             foreach (var book in books)
             {
-                Book bookTmp = await GetBookByIdAsync(book.InventoryNumber);
-                if (bookTmp.Status.Equals("In")) booksIn.Add(book);
+                BookInfo bookStat = await GetBookByIdAsync(book.InventoryNumber);
+                if (bookStat.Status.Equals("In")) booksIn.Add(book);
             }
 
             return booksIn;
         }
 
-        public async Task<Book?> GetBookByIdAsync(int id) => await _httpClient.GetFromJsonAsync<Book?>($"Books/GetById/{id}");
+        public async Task<BookInfo?> GetBookByIdAsync(int id) => await _httpClient.GetFromJsonAsync<BookInfo?>($"Books/GetById/{id}");
 
         public async Task UpdateBookAsync(int id, Book book) => await _httpClient.PutAsJsonAsync($"Books/{id}", book);
     }

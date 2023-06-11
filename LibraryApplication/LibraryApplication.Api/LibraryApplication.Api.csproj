@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LibraryApplication.Contract\LibraryApplication.Contract.csproj" />
+    <ProjectReference Include="..\LibraryApp.Contract\LibraryApp.Contract.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,7 @@
 ﻿@page "/persons"
 @using LibrarianApplication.Blazor.Model;
 @using LibrarianApplication.Blazor.Services;
+@using LibraryApp.Contract;
 @inject IPersonService PersonService
 
 @if (Members is null)
@@ -28,7 +29,7 @@ else
                     <td>@member.Address</td>
                     <td>@member.BirthDate</td>
                     <td><a href="persons/edit/@member.ReaderNumber" class="btn btn-primary">Edit</a></td>
-                    <td><a href="persons/@member.ReaderNumber" class="btn btn-primary">Details</a></td>
+                    <td><a href="persons/@member.ReaderNumber" class="btn btn-primary">Borrowed Books</a></td>
                 </tr>
             }
         </tbody>

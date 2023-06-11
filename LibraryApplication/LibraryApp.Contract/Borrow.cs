@@ -1,7 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace LibrarianApplication.Blazor.Model
+namespace LibraryApp.Contract
 {
     public class Borrow
     {
@@ -18,7 +23,6 @@ namespace LibrarianApplication.Blazor.Model
         [Required]
         [LaterThan(nameof(BorrowDate))]
         public DateTime ReturnDate { get; set; }
-        public string Title { get; set; }
     }
 }
 

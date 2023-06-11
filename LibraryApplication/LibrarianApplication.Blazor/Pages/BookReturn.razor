@@ -1,11 +1,12 @@
-﻿@page "/books/return/{memberid:int}"
+﻿@page "/return/{memberid:int}"
 @using LibrarianApplication.Blazor.Model;
 @using LibrarianApplication.Blazor.Services;
+@using LibraryApp.Contract;
 @inject IPersonService PersonService
 @inject IBorrowService BorrowService
 @inject NavigationManager NavigationManager
 
-@if (Borrows is null)
+@if (BorrowInfos is null)
 {
     <p>Loading...</p>
 }
@@ -21,7 +22,7 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var borrow in Borrows)
+            @foreach (var borrow in BorrowInfos)
             {
 
                 @if (DateTime.Now > borrow.ReturnDate)
@@ -47,25 +48,26 @@ else
             }
         </tbody>
     </table>
+    <a href="/" class="btn btn-primary">Back</a>
 }
 
 @code {
     [Parameter]
     public int MemberId { get; set; }
-    private IEnumerable<Borrow>? Borrows { get; set; }
+    private IEnumerable<BorrowInfo>? BorrowInfos { get; set; }
 
     private Person? Person { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
         Person = await PersonService.GetPersonByIdAsync(MemberId);
-        Borrows = await BorrowService.GetBorrowByNameAsync(Person.Name);
+        BorrowInfos = await BorrowService.GetBorrowByNameAsync(Person.Name);
     }
 
     private async Task ReturnBook(int InventoryNumber)
     {
         IEnumerable<Borrow>? borrowsTmp = await BorrowService.GetAllBorrowsAsync();
         await BorrowService.DeleteBorrowsAsync(borrowsTmp.First(x => x.InventoryNumber == InventoryNumber).Id);
-        NavigationManager.NavigateTo($"/books/return/{MemberId}", true);
+        NavigationManager.NavigateTo($"/return/{MemberId}", true);
     }
 }

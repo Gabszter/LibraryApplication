@@ -1,5 +1,6 @@
 ﻿using LibrarianApplication.Blazor.Model;
 using System.Net.Http.Json;
+using LibraryApp.Contract;
 
 namespace LibrarianApplication.Blazor.Services
 {

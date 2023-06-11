@@ -1,7 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace LibrarianApplication.Blazor.Model
+namespace LibraryApp.Contract
 {
     public class Book
     {
@@ -16,9 +21,6 @@ namespace LibrarianApplication.Blazor.Model
         public string Publisher { get; set; }
         [Required]
         public int EditionYear { get; set; }
-        public string Status { get; set; }
-        public string Borrower { get; set; }
-        public string DueDate { get; set; }
 
     }
 }

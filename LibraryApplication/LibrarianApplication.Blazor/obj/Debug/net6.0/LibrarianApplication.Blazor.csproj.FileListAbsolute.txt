@@ -1638,3 +1638,11 @@ C:\Users\Fetter\Desktop\LibraryApplication\LibraryApplication\LibrarianApplicati
 C:\Users\Fetter\Desktop\LibraryApplication\LibraryApplication\LibrarianApplication.Blazor\obj\Debug\net6.0\refint\LibrarianApplication.Blazor.dll
 C:\Users\Fetter\Desktop\LibraryApplication\LibraryApplication\LibrarianApplication.Blazor\obj\Debug\net6.0\LibrarianApplication.Blazor.pdb
 C:\Users\Fetter\Desktop\LibraryApplication\LibraryApplication\LibrarianApplication.Blazor\obj\Debug\net6.0\ref\LibrarianApplication.Blazor.dll
+C:\Users\Fetter\Desktop\LibraryApplication\LibraryApplication\LibrarianApplication.Blazor\bin\Debug\net6.0\wwwroot\_framework\LibraryApp.Contract.dll
+C:\Users\Fetter\Desktop\LibraryApplication\LibraryApplication\LibrarianApplication.Blazor\bin\Debug\net6.0\wwwroot\_framework\LibraryApp.Contract.pdb
+C:\Users\Fetter\Desktop\LibraryApplication\LibraryApplication\LibrarianApplication.Blazor\bin\Debug\net6.0\wwwroot\_framework\LibraryApp.Contract.dll.gz
+C:\Users\Fetter\Desktop\LibraryApplication\LibraryApplication\LibrarianApplication.Blazor\bin\Debug\net6.0\wwwroot\_framework\LibraryApp.Contract.pdb.gz
+C:\Users\Fetter\Desktop\LibraryApplication\LibraryApplication\LibrarianApplication.Blazor\bin\Debug\net6.0\LibraryApp.Contract.dll
+C:\Users\Fetter\Desktop\LibraryApplication\LibraryApplication\LibrarianApplication.Blazor\bin\Debug\net6.0\LibraryApp.Contract.pdb
+C:\Users\Fetter\Desktop\LibraryApplication\LibraryApplication\LibrarianApplication.Blazor\obj\Debug\net6.0\build-gz\fghtmc33.gz
+C:\Users\Fetter\Desktop\LibraryApplication\LibraryApplication\LibrarianApplication.Blazor\obj\Debug\net6.0\build-gz\tN0Uan2r.gz
