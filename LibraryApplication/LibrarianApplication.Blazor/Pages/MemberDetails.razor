@@ -23,11 +23,22 @@ else
         <tbody>
             @foreach (var borrow in Borrows)
             {
-                <tr>
-                    <td>@borrow.Title</td>
-                    <td>@borrow.BorrowDate</td>
-                    <td>@borrow.ReturnDate</td>
-                </tr>
+                @if (DateTime.Now>borrow.ReturnDate)
+                {
+                    <tr style="color: red;">
+                        <td>@borrow.Title</td>
+                        <td>@borrow.BorrowDate</td>
+                        <td>@borrow.ReturnDate</td>
+                    </tr>
+                }
+                else
+                {
+                     <tr>
+                        <td>@borrow.Title</td>
+                        <td>@borrow.BorrowDate</td>
+                        <td>@borrow.ReturnDate</td>
+                    </tr>
+                }
             }
         </tbody>
     </table>
@@ -40,7 +51,7 @@ else
 
     private Person? Person { get; set; }
 
-    private IEnumerable<Borrow>? Borrows {get;set;}
+    private IEnumerable<Borrow>? Borrows { get; set; }
 
     protected override async Task OnInitializedAsync()
     {

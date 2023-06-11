@@ -23,12 +23,27 @@ else
         <tbody>
             @foreach (var borrow in Borrows)
             {
-                <tr>
-                    <td>@borrow.Title</td>
-                    <td>@borrow.BorrowDate</td>
-                    <td>@borrow.ReturnDate</td>
-                    <td><button class="btn btn-primary" @onclick="() => ReturnBook(borrow.InventoryNumber)">Return</button></td>
-                </tr>
+
+                @if (DateTime.Now > borrow.ReturnDate)
+                {
+                    <tr style="color: red">
+                        <td>@borrow.Title</td>
+                        <td>@borrow.BorrowDate</td>
+                        <td>@borrow.ReturnDate</td>
+                        <td><button class="btn btn-primary" @onclick="() => ReturnBook(borrow.InventoryNumber)">Return</button></td>
+                    </tr>
+                }
+                else
+                {
+                    <tr>
+                        <td>@borrow.Title</td>
+                        <td>@borrow.BorrowDate</td>
+                        <td>@borrow.ReturnDate</td>
+                        <td><button class="btn btn-primary" @onclick="() => ReturnBook(borrow.InventoryNumber)">Return</button></td>
+                    </tr>
+                }
+
+
             }
         </tbody>
     </table>
@@ -51,6 +66,6 @@ else
     {
         IEnumerable<Borrow>? borrowsTmp = await BorrowService.GetAllBorrowsAsync();
         await BorrowService.DeleteBorrowsAsync(borrowsTmp.First(x => x.InventoryNumber == InventoryNumber).Id);
-        NavigationManager.NavigateTo($"/books/return/{MemberId}",true);
+        NavigationManager.NavigateTo($"/books/return/{MemberId}", true);
     }
 }
