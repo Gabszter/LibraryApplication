@@ -45,8 +45,8 @@ else
     [Parameter]
     public int BookId { get; set; }
     private Borrow Borrow { get; set; } = new();
-    private Person Member { get; set; }
-    private BookInfo BookInfo { get; set; }
+    private Person? Member { get; set; }
+    private BookInfo? BookInfo { get; set; }
 
     protected override async Task OnInitializedAsync()
     {

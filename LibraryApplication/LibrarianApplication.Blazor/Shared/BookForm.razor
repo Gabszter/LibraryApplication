@@ -1,5 +1,12 @@
 ﻿@using LibrarianApplication.Blazor.Model;
 @using LibraryApp.Contract;
+
+@if (Book is null || HandleValidSubmitAsync is null)
+{
+    <p>Loading...</p>
+}
+else
+{
 <EditForm Model="@Book" OnValidSubmit="@HandleValidSubmitAsync">
     <DataAnnotationsValidator />
     <div class="mb0">
@@ -24,14 +31,15 @@
     </div>
     <button style="margin-top:10px" type="submit" class="btn btn-primary form-control mb-3">@ButtonTitle</button>
 </EditForm>
+}
 
 @code {
     [Parameter]
-    public Book Book { get; set; }
+    public Book? Book { get; set; }
 
     [Parameter]
-    public string ButtonTitle { get; set; }
+    public string? ButtonTitle { get; set; }
 
     [Parameter]
-    public Func<Task> HandleValidSubmitAsync { get; set; }
+    public Func<Task>? HandleValidSubmitAsync { get; set; }
 }

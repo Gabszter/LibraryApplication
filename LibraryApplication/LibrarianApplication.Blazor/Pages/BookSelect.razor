@@ -51,10 +51,8 @@ else
         Books = await BookService.GetAllAvailableBookAsync();
     }
 
-    private async Task BorrowBook(int InventoryNumber)
+    private void BorrowBook(int InventoryNumber)
     {
-        //Borrow borrowTmp = new Borrow { ReaderNumber = MemberId, InventoryNumber = InventoryNumber, BorrowDate = DateTime.Now, ReturnDate = DateTime.Now.AddDays(14) };
-        //await BorrowService.AddBorrowAsync(borrowTmp);
         NavigationManager.NavigateTo($"/borrow/{MemberId}/{InventoryNumber}");
     }
 }

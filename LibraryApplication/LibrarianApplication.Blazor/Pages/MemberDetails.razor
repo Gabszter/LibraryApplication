@@ -6,7 +6,7 @@
 @inject IBorrowService BorrowService
 @inject NavigationManager NavigationManager
 
-@if (Person is null)
+@if (Person is null || BorrowInfos is null)
 {
     <p>Loading...</p>
 }
@@ -24,7 +24,7 @@ else
         <tbody>
             @foreach (var borrow in BorrowInfos)
             {
-                @if (DateTime.Now>borrow.ReturnDate)
+                @if (DateTime.Now > borrow.ReturnDate)
                 {
                     <tr style="color: red;">
                         <td>@borrow.Title</td>
@@ -34,7 +34,7 @@ else
                 }
                 else
                 {
-                     <tr>
+                    <tr>
                         <td>@borrow.Title</td>
                         <td>@borrow.BorrowDate</td>
                         <td>@borrow.ReturnDate</td>
@@ -57,6 +57,6 @@ else
     protected override async Task OnInitializedAsync()
     {
         Person = await PersonService.GetPersonByIdAsync(Id);
-        BorrowInfos = await BorrowService.GetBorrowByNameAsync(Person.Name);
+        BorrowInfos = Person is not null ? await BorrowService.GetBorrowByNameAsync(Person.Name) : null;
     }
 }
