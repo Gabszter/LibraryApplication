@@ -1,10 +1,10 @@
-﻿using LibraryApp.Contract;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System.Xml.Linq;
-
-namespace LibraryApplication.Api.Controllers
+﻿namespace LibraryApplication.Api.Controllers
 {
+    using System.Xml.Linq;
+    using LibraryApp.Contract;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.EntityFrameworkCore;
+
     [ApiController]
     [Route("[controller]")]
     public class PersonsController : ControllerBase
@@ -14,15 +14,15 @@ namespace LibraryApplication.Api.Controllers
 
         public PersonsController(LibraryContext libraryContext, ILogger<PersonsController> logger)
         {
-            _libraryContext = libraryContext;
-            _logger = logger;
+            this._libraryContext = libraryContext;
+            this._logger = logger;
         }
 
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] Person person)
         {
-            _libraryContext.Persons.Add(person);
-            await _libraryContext.SaveChangesAsync();
+            this._libraryContext.Persons.Add(person);
+            await this._libraryContext.SaveChangesAsync();
 
             return Ok();
         }
@@ -30,38 +30,38 @@ namespace LibraryApplication.Api.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Person>>> Get()
         {
-            _logger.LogInformation("People endpoint was called");
-            var people = await _libraryContext.Persons.ToListAsync();
-            return Ok(people);
+            this._logger.LogInformation("People endpoint was called");
+            var people = await this._libraryContext.Persons.ToListAsync();
+            return this.Ok(people);
         }
 
         [HttpGet("{id}")]
-         public async Task<IActionResult> Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            var person = await _libraryContext.Persons.FindAsync(id);
+            var person = await this._libraryContext.Persons.FindAsync(id);
             if (person == null)
             {
-                return NotFound();
+                return this.NotFound();
             }
 
-            var borrowedBooks = from bw in _libraryContext.Borrows
-                           join p in _libraryContext.Persons on bw.ReaderNumber equals p.ReaderNumber
-                           join b in _libraryContext.Books on bw.InventoryNumber equals b.InventoryNumber
+            var borrowedBooks = from bw in this._libraryContext.Borrows
+                           join p in this._libraryContext.Persons on bw.ReaderNumber equals p.ReaderNumber
+                           join b in this._libraryContext.Books on bw.InventoryNumber equals b.InventoryNumber
                            where p.ReaderNumber == id
                            select new
                            {
                                Title = b.Title,
-                               ReturnDate = bw.ReturnDate
+                               ReturnDate = bw.ReturnDate,
                            };
             var response = new Dictionary<string, object>
                 {
-                    { "ReaderNumber", person.ReaderNumber},
-                    { "Name", person.Name},
-                    { "Address", person.Address},
-                    { "BirthDate", person.BirthDate},
-                    { "BorrowedBooks", borrowedBooks},
+                    { "ReaderNumber", person.ReaderNumber },
+                    { "Name", person.Name },
+                    { "Address", person.Address },
+                    { "BirthDate", person.BirthDate },
+                    { "BorrowedBooks", borrowedBooks },
                 };
-            return Ok(response);
+            return this.Ok(response);
         }
 
         [HttpPut("{id}")]
@@ -69,39 +69,38 @@ namespace LibraryApplication.Api.Controllers
         {
             if (id != person.ReaderNumber)
             {
-                return BadRequest();
+                return this.BadRequest();
             }
 
-            var existingPerson = await _libraryContext.Persons.FindAsync(id);
+            var existingPerson = await this._libraryContext.Persons.FindAsync(id);
 
             if (existingPerson is null)
             {
-                return NotFound();
+                return this.NotFound();
             }
 
             existingPerson.Name = person.Name;
             existingPerson.Address = person.Address;
             existingPerson.BirthDate = person.BirthDate;
-            await _libraryContext.SaveChangesAsync();
+            await this._libraryContext.SaveChangesAsync();
 
-            return NoContent();
+            return this.NoContent();
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var existingPerson = await _libraryContext.Persons.FindAsync(id);
+            var existingPerson = await this._libraryContext.Persons.FindAsync(id);
 
             if (existingPerson is null)
             {
-                return NotFound();
+                return this.NotFound();
             }
 
-            _libraryContext.Persons.Remove(existingPerson);
-            await _libraryContext.SaveChangesAsync();
+            this._libraryContext.Persons.Remove(existingPerson);
+            await this._libraryContext.SaveChangesAsync();
 
-            return NoContent();
+            return this.NoContent();
         }
-
     }
 }

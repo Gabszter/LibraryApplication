@@ -1,8 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using LibraryApp.Contract;
-
-namespace LibraryApplication.Api
+﻿namespace LibraryApplication.Api
 {
+    using LibraryApp.Contract;
+    using Microsoft.EntityFrameworkCore;
+
     public class LibraryContext : DbContext
     {
         public LibraryContext(DbContextOptions options)
@@ -11,6 +11,7 @@ namespace LibraryApplication.Api
         }
 
         public virtual DbSet<Person> Persons { get; set; }
+
         public virtual DbSet<Borrow> Borrows { get; set; }
 
         public virtual DbSet<Book> Books { get; set; }

@@ -1,10 +1,10 @@
-﻿using LibraryApp.Contract;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System;
-
-namespace LibraryApplication.Api.Controllers
+﻿namespace LibraryApplication.Api.Controllers
 {
+    using System;
+    using LibraryApp.Contract;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.EntityFrameworkCore;
+
     [ApiController]
     [Route("[controller]")]
     public class BorrowsController : ControllerBase
@@ -14,52 +14,54 @@ namespace LibraryApplication.Api.Controllers
 
         public BorrowsController(LibraryContext libraryContext, ILogger<BorrowsController> logger)
         {
-            _libraryContext = libraryContext;
-            _logger = logger;
+            this._libraryContext = libraryContext;
+            this._logger = logger;
         }
 
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] Borrow borrow)
         {
-            var hasBorrow = await _libraryContext.Borrows
+            var hasBorrow = await this._libraryContext.Borrows
                 .Where(br => br.InventoryNumber == borrow.InventoryNumber).AnyAsync();
 
             if (hasBorrow)
             {
-                return BadRequest("This book is borrowed");
+                return this.BadRequest("This book is borrowed");
             }
-            _libraryContext.Borrows.Add(borrow);
-            await _libraryContext.SaveChangesAsync();
 
-            return Ok();
+            this._libraryContext.Borrows.Add(borrow);
+            await this._libraryContext.SaveChangesAsync();
+
+            return this.Ok();
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Borrow>>> Get()
         {
-            _logger.LogInformation("Borrow endpoint was called");
-            var borrows = await _libraryContext.Borrows.ToListAsync();
-            return Ok(borrows);
+            this._logger.LogInformation("Borrow endpoint was called");
+            var borrows = await this._libraryContext.Borrows.ToListAsync();
+            return this.Ok(borrows);
         }
 
         [HttpGet("{name}")]
         public async Task<ActionResult<IEnumerable<Borrow>>> Get(string name)
         {
-
-            var person = await _libraryContext.Persons.Where(p => p.Name == name).ToListAsync();
+            var person = await this._libraryContext.Persons.Where(p => p.Name == name).ToListAsync();
             if (person == null) 
             {
-                return NotFound();
+                return this.NotFound();
             }
-            var response = from bw in _libraryContext.Borrows
-                                     join p in _libraryContext.Persons on bw.ReaderNumber equals p.ReaderNumber
-                                     join b in _libraryContext.Books on bw.InventoryNumber equals b.InventoryNumber
+
+            var response = from bw in this._libraryContext.Borrows
+                                     join p in this._libraryContext.Persons on bw.ReaderNumber equals p.ReaderNumber
+                                     join b in this._libraryContext.Books on bw.InventoryNumber equals b.InventoryNumber
                                      where p.Name == name
                                      select new { Title = b.Title,
                                                   InventoryNumber = b.InventoryNumber,
-                                                  BorrowDate = bw.BorrowDate, 
-                                                  ReturnDate = bw.ReturnDate };
-            return Ok(response);
+                                                  BorrowDate = bw.BorrowDate,
+                                                  ReturnDate = bw.ReturnDate,
+                                     };
+            return this.Ok(response);
         }
 
         [HttpPut("{id}")]
@@ -67,40 +69,40 @@ namespace LibraryApplication.Api.Controllers
         {
             if (id != borrow.Id)
             {
-                return BadRequest();
+                return this.BadRequest();
             }
 
-            var existingBorrow = await _libraryContext.Borrows.FindAsync(id);
+            var existingBorrow = await this._libraryContext.Borrows.FindAsync(id);
 
             if (existingBorrow is null)
             {
-                return NotFound();
+                return this.NotFound();
             }
 
             existingBorrow.ReaderNumber = borrow.ReaderNumber;
-            existingBorrow.InventoryNumber=borrow.InventoryNumber;
-            existingBorrow.BorrowDate=borrow.BorrowDate;
-            existingBorrow.ReturnDate=borrow.ReturnDate;
+            existingBorrow.InventoryNumber = borrow.InventoryNumber;
+            existingBorrow.BorrowDate = borrow.BorrowDate;
+            existingBorrow.ReturnDate = borrow.ReturnDate;
 
-            await _libraryContext.SaveChangesAsync();
+            await this._libraryContext.SaveChangesAsync();
 
-            return NoContent();
+            return this.NoContent();
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var existingBorrow = await _libraryContext.Borrows.FindAsync(id);
+            var existingBorrow = await this._libraryContext.Borrows.FindAsync(id);
 
             if (existingBorrow is null)
             {
-                return NotFound();
+                return this.NotFound();
             }
 
-            _libraryContext.Borrows.Remove(existingBorrow);
-            await _libraryContext.SaveChangesAsync();
+            this._libraryContext.Borrows.Remove(existingBorrow);
+            await this._libraryContext.SaveChangesAsync();
 
-            return NoContent();
+            return this.NoContent();
         }
     }
 }

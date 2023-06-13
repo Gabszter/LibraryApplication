@@ -6,7 +6,7 @@
 
         public GuidService()
         {
-            Guid = Guid.NewGuid();
+            this.Guid = Guid.NewGuid();
         }
     }
 }

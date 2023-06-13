@@ -8118,24 +8118,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Fetter\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Fetter\\Desktop\\LibraryApplication\\LibraryApplication\\LibraryApplication.Api\\LibraryApplication.Api.csproj",
+      "projectUniqueName": "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibraryApplication.Api\\LibraryApplication.Api.csproj",
       "projectName": "LibraryApplication.Api",
-      "projectPath": "C:\\Users\\Fetter\\Desktop\\LibraryApplication\\LibraryApplication\\LibraryApplication.Api\\LibraryApplication.Api.csproj",
-      "packagesPath": "C:\\Users\\Fetter\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Fetter\\Desktop\\LibraryApplication\\LibraryApplication\\LibraryApplication.Api\\obj\\",
+      "projectPath": "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibraryApplication.Api\\LibraryApplication.Api.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibraryApplication.Api\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Fetter\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8143,16 +8138,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.devexpress.com/kpafjIikRrIULKGgPVJtZTzuNcf5nOjB7CA4wpCRoPDxjyLAob/api": {}
+        "https://nuget.org/api/v2": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Fetter\\Desktop\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\LibraryApp.Contract.csproj": {
-              "projectPath": "C:\\Users\\Fetter\\Desktop\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\LibraryApp.Contract.csproj"
+            "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\LibraryApp.Contract.csproj": {
+              "projectPath": "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\LibraryApp.Contract.csproj"
             }
           }
         }
@@ -8223,7 +8216,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
