@@ -1,0 +1,48 @@
+﻿@page "/getbyid/{id:int}"
+@using LibraryUserApplication.Blazor.Model;
+@using LibraryUserApplication.Blazor.Services;
+@using LibraryApp.Contract;
+@inject IBookService BookService
+@inject NavigationManager NavigationManager
+
+@if (BookInfo is null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <h3>@BookInfo.Title's status</h3>
+
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Status</th>
+                <th>Borrower</th>
+                <th>Due Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@BookInfo.Title</td>
+                <td>@BookInfo.Status</td>
+                <td>@BookInfo.Borrower</td>
+                <td>@BookInfo.DueDate</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="/" class="btn btn-primary">Back to book list</a>
+}
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private BookInfo? BookInfo { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        BookInfo = await BookService.GetBookByIdAsync(Id);
+    }
+}
