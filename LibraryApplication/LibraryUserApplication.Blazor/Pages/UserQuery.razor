@@ -4,17 +4,19 @@
 @using LibraryApp.Contract;
 @inject IBookService BookService
 @inject IPersonService PersonService
+@inject NavigationManager NavigationManager
 
 <h3>Check your borrowed books</h3>
     <EditForm Model="Person">
         <div class="mb0">
             <label class="col-form-label">Give us your name to check your borrowed books</label>
-            <InputText @bind-Value="@check" class="form-control" />
-            <button style="margin-top:10px" type="submit" class="btn btn-primary form-control mb-3">OK</button>
+            <InputText @bind-Value="@name" class="form-control" />
+        <a href="userquery/selected/@name" class="btn btn-primary">OK</a>
         </div>
     </EditForm>
 
+
 @code {
+    public string? name { get; set; }
     private Person Person { get; set; } = new();
-    private string check;
 }
