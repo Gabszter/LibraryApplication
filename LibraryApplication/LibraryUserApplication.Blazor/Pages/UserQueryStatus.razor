@@ -10,10 +10,10 @@
 @if (BorrowInfos is null)
 {
     <p>Loading...</p>
-}
+} 
 else
 {
-    <h3>@name's datas</h3>
+    <h3>@name's borrowed books</h3>
     <table class="table table-bordered table-hover">
         <thead>
             <tr>
@@ -33,12 +33,12 @@ else
             }
         </tbody>
     </table>
-    <a href="/" class="btn btn-primary">Back to the main page</a>
+    <a href="/userquery" class="btn btn-primary">Back to the query page</a>
 }
 
 @code {
     [Parameter]
-    public string name { get; set; }
+    public string? name { get; set; }
     private IEnumerable<BorrowInfo>? BorrowInfos { get; set; }
 
     protected override async Task OnInitializedAsync()

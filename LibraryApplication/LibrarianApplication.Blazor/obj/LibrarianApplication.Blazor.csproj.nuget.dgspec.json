@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibrarianApplication.Blazor\\LibrarianApplication.Blazor.csproj": {}
+    "C:\\Users\\attil\\Desktop\\LibraryApplication\\LibraryApplication\\LibraryApplication\\LibrarianApplication.Blazor\\LibrarianApplication.Blazor.csproj": {}
   },
   "projects": {
-    "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibrarianApplication.Blazor\\LibrarianApplication.Blazor.csproj": {
+    "C:\\Users\\attil\\Desktop\\LibraryApplication\\LibraryApplication\\LibraryApplication\\LibrarianApplication.Blazor\\LibrarianApplication.Blazor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibrarianApplication.Blazor\\LibrarianApplication.Blazor.csproj",
+        "projectUniqueName": "C:\\Users\\attil\\Desktop\\LibraryApplication\\LibraryApplication\\LibraryApplication\\LibrarianApplication.Blazor\\LibrarianApplication.Blazor.csproj",
         "projectName": "LibrarianApplication.Blazor",
-        "projectPath": "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibrarianApplication.Blazor\\LibrarianApplication.Blazor.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibrarianApplication.Blazor\\obj\\",
+        "projectPath": "C:\\Users\\attil\\Desktop\\LibraryApplication\\LibraryApplication\\LibraryApplication\\LibrarianApplication.Blazor\\LibrarianApplication.Blazor.csproj",
+        "packagesPath": "C:\\Users\\attil\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\attil\\Desktop\\LibraryApplication\\LibraryApplication\\LibraryApplication\\LibrarianApplication.Blazor\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\attil\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +22,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://nuget.org/api/v2": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\LibraryApp.Contract.csproj": {
-                "projectPath": "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\LibraryApp.Contract.csproj"
+              "C:\\Users\\attil\\Desktop\\LibraryApplication\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\LibraryApp.Contract.csproj": {
+                "projectPath": "C:\\Users\\attil\\Desktop\\LibraryApplication\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\LibraryApp.Contract.csproj"
               }
             }
           }
@@ -82,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -91,17 +91,17 @@
         }
       }
     },
-    "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\LibraryApp.Contract.csproj": {
+    "C:\\Users\\attil\\Desktop\\LibraryApplication\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\LibraryApp.Contract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\LibraryApp.Contract.csproj",
+        "projectUniqueName": "C:\\Users\\attil\\Desktop\\LibraryApplication\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\LibraryApp.Contract.csproj",
         "projectName": "LibraryApp.Contract",
-        "projectPath": "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\LibraryApp.Contract.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\obj\\",
+        "projectPath": "C:\\Users\\attil\\Desktop\\LibraryApplication\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\LibraryApp.Contract.csproj",
+        "packagesPath": "C:\\Users\\attil\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\attil\\Desktop\\LibraryApplication\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\attil\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -109,7 +109,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://nuget.org/api/v2": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -142,7 +142,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

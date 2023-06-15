@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibraryApplication.Api\\LibraryApplication.Api.csproj": {}
+    "C:\\Users\\attil\\Desktop\\LibraryApplication\\LibraryApplication\\LibraryApplication\\LibraryApplication.Api\\LibraryApplication.Api.csproj": {}
   },
   "projects": {
-    "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\LibraryApp.Contract.csproj": {
+    "C:\\Users\\attil\\Desktop\\LibraryApplication\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\LibraryApp.Contract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\LibraryApp.Contract.csproj",
+        "projectUniqueName": "C:\\Users\\attil\\Desktop\\LibraryApplication\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\LibraryApp.Contract.csproj",
         "projectName": "LibraryApp.Contract",
-        "projectPath": "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\LibraryApp.Contract.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\obj\\",
+        "projectPath": "C:\\Users\\attil\\Desktop\\LibraryApplication\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\LibraryApp.Contract.csproj",
+        "packagesPath": "C:\\Users\\attil\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\attil\\Desktop\\LibraryApplication\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\attil\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://nuget.org/api/v2": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -55,21 +55,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibraryApplication.Api\\LibraryApplication.Api.csproj": {
+    "C:\\Users\\attil\\Desktop\\LibraryApplication\\LibraryApplication\\LibraryApplication\\LibraryApplication.Api\\LibraryApplication.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibraryApplication.Api\\LibraryApplication.Api.csproj",
+        "projectUniqueName": "C:\\Users\\attil\\Desktop\\LibraryApplication\\LibraryApplication\\LibraryApplication\\LibraryApplication.Api\\LibraryApplication.Api.csproj",
         "projectName": "LibraryApplication.Api",
-        "projectPath": "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibraryApplication.Api\\LibraryApplication.Api.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibraryApplication.Api\\obj\\",
+        "projectPath": "C:\\Users\\attil\\Desktop\\LibraryApplication\\LibraryApplication\\LibraryApplication\\LibraryApplication.Api\\LibraryApplication.Api.csproj",
+        "packagesPath": "C:\\Users\\attil\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\attil\\Desktop\\LibraryApplication\\LibraryApplication\\LibraryApplication\\LibraryApplication.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\attil\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -77,14 +77,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://nuget.org/api/v2": {}
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\LibraryApp.Contract.csproj": {
-                "projectPath": "D:\\C# bead\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\LibraryApp.Contract.csproj"
+              "C:\\Users\\attil\\Desktop\\LibraryApplication\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\LibraryApp.Contract.csproj": {
+                "projectPath": "C:\\Users\\attil\\Desktop\\LibraryApplication\\LibraryApplication\\LibraryApplication\\LibraryApp.Contract\\LibraryApp.Contract.csproj"
               }
             }
           }
@@ -155,7 +156,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
