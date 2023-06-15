@@ -4,9 +4,10 @@
 @using LibraryApp.Contract;
 @inject IBookService BookService
 @inject IPersonService PersonService
+@inject IBorrowService BorrowService
 @inject NavigationManager NavigationManager
 
-@if (Members is null)
+@if (BorrowInfos is null)
 {
     <p>Loading...</p>
 }
@@ -16,35 +17,32 @@ else
     <table class="table table-bordered table-hover">
         <thead>
             <tr>
-                <th>ReaderNumber</th>
-                <th>Name</th>
-                <th>Address</th>
-                <th>BirthDate</th>
+                <th>Title</th>
+                <th>Date of borrowing</th>
+                <th>Return date</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var member in Members)
+            @foreach (var borrow in BorrowInfos)
             {
                 <tr>
-                    <td>@member.ReaderNumber</td>
-                    <td>@member.Name</td>
-                    <td>@member.Address</td>
-                    <td>@member.BirthDate</td>
-                    <td><a href="persons/@member.ReaderNumber" class="btn btn-primary">Borrowed Books</a></td>
+                    <td>@borrow.Title</td>
+                    <td>@borrow.BorrowDate</td>
+                    <td>@borrow.ReturnDate</td>
                 </tr>
             }
         </tbody>
     </table>
+    <a href="/" class="btn btn-primary">Back to the main page</a>
 }
 
 @code {
     [Parameter]
     public string name { get; set; }
-    private IEnumerable<Person>? Members { get; set; }
+    private IEnumerable<BorrowInfo>? BorrowInfos { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        Members = await PersonService.GetAllPersonAsync();
-
+        BorrowInfos = await BorrowService.GetBorrowByNameAsync(name);
     }
 }

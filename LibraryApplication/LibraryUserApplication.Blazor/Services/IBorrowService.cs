@@ -11,6 +11,6 @@ namespace LibraryUserApplication.Blazor.Services
     /// </summary>
     public interface IBorrowService
     {
-
+        Task<IEnumerable<BorrowInfo>?> GetBorrowByNameAsync(string name);
     }
 }

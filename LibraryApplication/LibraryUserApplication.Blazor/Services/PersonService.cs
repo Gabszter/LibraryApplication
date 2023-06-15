@@ -29,9 +29,10 @@ namespace LibraryUserApplication.Blazor.Services
         /// <returns>An enumerable collection of persons.</returns>
         public async Task<IEnumerable<Person>?> GetAllPersonAsync() => await this.httpClient.GetFromJsonAsync<IEnumerable<Person>>("Persons");
 
-
-
-
+        /// <summary>
+        /// Retrieves the selected member's datas asynchronously.
+        /// </summary>
+        /// <returns>An enumerable list of a person.</returns>
         public async Task<IEnumerable<Person>?> GetPersonForQueryAsync(string name)
         {
             IEnumerable<Person>? persons = await this.GetAllPersonAsync();

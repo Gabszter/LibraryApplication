@@ -23,5 +23,12 @@ namespace LibraryUserApplication.Blazor.Services
             this.httpClient = httpClient;
         }
 
+        /// <summary>
+        /// Retrieves borrows by borrower name asynchronously.
+        /// </summary>
+        /// <param name="name">The name of the borrower.</param>
+        /// <returns>An enumerable collection of <see cref="BorrowInfo"/> objects.</returns>
+        public async Task<IEnumerable<BorrowInfo>?> GetBorrowByNameAsync(string name) => await this.httpClient.GetFromJsonAsync<IEnumerable<BorrowInfo>?>($"Borrows/{name}");
+
     }
 }
